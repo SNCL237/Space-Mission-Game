@@ -1,0 +1,3235 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`contrats — gel C1 à C10 > T1-03 : instantanés des schémas — toute modification non versionnée échoue 1`] = `
+{
+  "C1": {
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "additionalProperties": false,
+    "properties": {
+      "composants": {
+        "items": {
+          "additionalProperties": false,
+          "properties": {
+            "capaciteBatterieWh": {
+              "exclusiveMinimum": 0,
+              "type": "number",
+            },
+            "categorie": {
+              "minLength": 1,
+              "type": "string",
+            },
+            "costMUSD": {
+              "type": "number",
+            },
+            "degradationAn": {
+              "maximum": 1,
+              "minimum": 0,
+              "type": "number",
+            },
+            "dutyCycle": {
+              "maximum": 1,
+              "minimum": 0,
+              "type": "number",
+            },
+            "fiabilite": {
+              "maximum": 1,
+              "minimum": 0,
+              "type": "number",
+            },
+            "id": {
+              "format": "uuid",
+              "pattern": "^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-4[0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12})$",
+              "type": "string",
+            },
+            "ispS": {
+              "exclusiveMinimum": 0,
+              "type": "number",
+            },
+            "masseKg": {
+              "type": "number",
+            },
+            "niveau": {
+              "enum": [
+                "decouverte",
+                "ingenieur",
+                "expert",
+              ],
+              "type": "string",
+            },
+            "nom": {
+              "minLength": 1,
+              "type": "string",
+            },
+            "powerW": {
+              "type": "number",
+            },
+            "source": {
+              "minLength": 1,
+              "type": "string",
+            },
+            "urlSource": {
+              "format": "uri",
+              "type": "string",
+            },
+          },
+          "required": [
+            "id",
+            "source",
+            "categorie",
+            "nom",
+            "masseKg",
+            "powerW",
+            "costMUSD",
+            "fiabilite",
+            "niveau",
+          ],
+          "type": "object",
+        },
+        "type": "array",
+      },
+      "instruments": {
+        "items": {
+          "additionalProperties": false,
+          "properties": {
+            "costMUSD": {
+              "type": "number",
+            },
+            "dataMbps": {
+              "type": "number",
+            },
+            "dutyCycle": {
+              "maximum": 1,
+              "minimum": 0,
+              "type": "number",
+            },
+            "fiabilite": {
+              "maximum": 1,
+              "minimum": 0,
+              "type": "number",
+            },
+            "id": {
+              "format": "uuid",
+              "pattern": "^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-4[0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12})$",
+              "type": "string",
+            },
+            "incompatiblesAvec": {
+              "items": {
+                "minLength": 1,
+                "type": "string",
+              },
+              "type": "array",
+            },
+            "masseKg": {
+              "type": "number",
+            },
+            "missionsReelles": {
+              "items": {
+                "minLength": 1,
+                "type": "string",
+              },
+              "type": "array",
+            },
+            "nom": {
+              "minLength": 1,
+              "type": "string",
+            },
+            "powerW": {
+              "type": "number",
+            },
+            "source": {
+              "minLength": 1,
+              "type": "string",
+            },
+            "urlSource": {
+              "format": "uri",
+              "type": "string",
+            },
+            "valeurScientifique": {
+              "type": "number",
+            },
+          },
+          "required": [
+            "id",
+            "source",
+            "nom",
+            "masseKg",
+            "powerW",
+            "costMUSD",
+            "dataMbps",
+            "valeurScientifique",
+            "fiabilite",
+          ],
+          "type": "object",
+        },
+        "type": "array",
+      },
+      "lanceurs": {
+        "items": {
+          "additionalProperties": false,
+          "properties": {
+            "capaciteKg": {
+              "additionalProperties": {
+                "type": "number",
+              },
+              "propertyNames": {
+                "enum": [
+                  "polaire",
+                  "circulaireBasse",
+                  "elliptique",
+                ],
+                "type": "string",
+              },
+              "type": "object",
+            },
+            "classe": {
+              "enum": [
+                "leger",
+                "moyen",
+                "lourd",
+              ],
+              "type": "string",
+            },
+            "costMUSD": {
+              "type": "number",
+            },
+            "fiabilite": {
+              "maximum": 1,
+              "minimum": 0,
+              "type": "number",
+            },
+            "id": {
+              "format": "uuid",
+              "pattern": "^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-4[0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12})$",
+              "type": "string",
+            },
+            "nom": {
+              "minLength": 1,
+              "type": "string",
+            },
+            "source": {
+              "minLength": 1,
+              "type": "string",
+            },
+            "urlSource": {
+              "format": "uri",
+              "type": "string",
+            },
+          },
+          "required": [
+            "id",
+            "source",
+            "nom",
+            "classe",
+            "capaciteKg",
+            "costMUSD",
+            "fiabilite",
+          ],
+          "type": "object",
+        },
+        "type": "array",
+      },
+      "orbites": {
+        "items": {
+          "additionalProperties": false,
+          "properties": {
+            "altitudeKm": {
+              "type": "number",
+            },
+            "couverture": {
+              "maximum": 1,
+              "minimum": 0,
+              "type": "number",
+            },
+            "fractionOmbre": {
+              "maximum": 1,
+              "minimum": 0,
+              "type": "number",
+            },
+            "id": {
+              "format": "uuid",
+              "pattern": "^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-4[0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12})$",
+              "type": "string",
+            },
+            "inclinaisonDeg": {
+              "type": "number",
+            },
+            "periodeS": {
+              "type": "number",
+            },
+            "source": {
+              "minLength": 1,
+              "type": "string",
+            },
+            "tempsContactSolMin": {
+              "type": "number",
+            },
+            "type": {
+              "enum": [
+                "polaire",
+                "circulaireBasse",
+                "elliptique",
+              ],
+              "type": "string",
+            },
+            "urlSource": {
+              "format": "uri",
+              "type": "string",
+            },
+          },
+          "required": [
+            "id",
+            "source",
+            "type",
+            "altitudeKm",
+            "inclinaisonDeg",
+            "periodeS",
+            "fractionOmbre",
+            "tempsContactSolMin",
+            "couverture",
+          ],
+          "type": "object",
+        },
+        "type": "array",
+      },
+      "seuils": {
+        "additionalProperties": {
+          "type": "number",
+        },
+        "propertyNames": {
+          "type": "string",
+        },
+        "type": "object",
+      },
+      "stationsSol": {
+        "items": {
+          "additionalProperties": false,
+          "properties": {
+            "dataMbps": {
+              "type": "number",
+            },
+            "id": {
+              "format": "uuid",
+              "pattern": "^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-4[0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12})$",
+              "type": "string",
+            },
+            "nom": {
+              "minLength": 1,
+              "type": "string",
+            },
+            "source": {
+              "minLength": 1,
+              "type": "string",
+            },
+            "urlSource": {
+              "format": "uri",
+              "type": "string",
+            },
+          },
+          "required": [
+            "id",
+            "source",
+            "nom",
+            "dataMbps",
+          ],
+          "type": "object",
+        },
+        "type": "array",
+      },
+      "version": {
+        "minLength": 1,
+        "type": "string",
+      },
+    },
+    "required": [
+      "version",
+      "composants",
+      "instruments",
+      "orbites",
+      "lanceurs",
+      "stationsSol",
+      "seuils",
+    ],
+    "type": "object",
+  },
+  "C10": {
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "additionalProperties": false,
+    "properties": {
+      "chronologie": {
+        "items": {
+          "additionalProperties": false,
+          "properties": {
+            "acte": {
+              "maximum": 6,
+              "minimum": 0,
+              "type": "integer",
+            },
+            "code": {
+              "minLength": 1,
+              "type": "string",
+            },
+            "date": {
+              "format": "date-time",
+              "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d:[0-5]\\d(?:\\.\\d+)?(?:Z))$",
+              "type": "string",
+            },
+            "id": {
+              "format": "uuid",
+              "pattern": "^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-4[0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12})$",
+              "type": "string",
+            },
+            "segment": {
+              "enum": [
+                "lancement",
+                "spatial",
+                "sol",
+                "utilisateurs",
+              ],
+              "type": "string",
+            },
+          },
+          "required": [
+            "id",
+            "date",
+            "acte",
+            "segment",
+            "code",
+          ],
+          "type": "object",
+        },
+        "type": "array",
+      },
+      "concept": {
+        "additionalProperties": false,
+        "properties": {
+          "cible": {
+            "minLength": 1,
+            "type": "string",
+          },
+          "missionId": {
+            "format": "uuid",
+            "pattern": "^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-4[0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12})$",
+            "type": "string",
+          },
+          "objectifs": {
+            "items": {
+              "additionalProperties": false,
+              "properties": {
+                "id": {
+                  "format": "uuid",
+                  "pattern": "^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-4[0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12})$",
+                  "type": "string",
+                },
+                "role": {
+                  "minLength": 1,
+                  "type": "string",
+                },
+                "titre": {
+                  "minLength": 1,
+                  "type": "string",
+                },
+              },
+              "required": [
+                "id",
+                "titre",
+                "role",
+              ],
+              "type": "object",
+            },
+            "type": "array",
+          },
+          "scenarioId": {
+            "format": "uuid",
+            "pattern": "^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-4[0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12})$",
+            "type": "string",
+          },
+        },
+        "required": [
+          "missionId",
+          "scenarioId",
+          "cible",
+          "objectifs",
+        ],
+        "type": "object",
+      },
+      "notesModele": {
+        "items": {
+          "minLength": 1,
+          "type": "string",
+        },
+        "type": "array",
+      },
+      "scene3d": {
+        "additionalProperties": false,
+        "properties": {
+          "corpsCeleste": {
+            "additionalProperties": false,
+            "properties": {
+              "nom": {
+                "minLength": 1,
+                "type": "string",
+              },
+              "rayonKm": {
+                "exclusiveMinimum": 0,
+                "type": "number",
+              },
+            },
+            "required": [
+              "nom",
+              "rayonKm",
+            ],
+            "type": "object",
+          },
+          "engin": {
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "format": "uuid",
+                "pattern": "^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-4[0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12})$",
+                "type": "string",
+              },
+              "trajectoireId": {
+                "minLength": 1,
+                "type": "string",
+              },
+            },
+            "required": [
+              "id",
+              "trajectoireId",
+            ],
+            "type": "object",
+          },
+        },
+        "required": [
+          "corpsCeleste",
+          "engin",
+        ],
+        "type": "object",
+      },
+      "trajectoires": {
+        "additionalProperties": false,
+        "properties": {
+          "orbite": {
+            "additionalProperties": false,
+            "properties": {
+              "altitudeKm": {
+                "exclusiveMinimum": 0,
+                "type": "number",
+              },
+              "inclinaisonDeg": {
+                "maximum": 180,
+                "minimum": 0,
+                "type": "number",
+              },
+              "periodeS": {
+                "exclusiveMinimum": 0,
+                "type": "number",
+              },
+            },
+            "required": [
+              "altitudeKm",
+              "inclinaisonDeg",
+              "periodeS",
+            ],
+            "type": "object",
+          },
+          "positions": {
+            "items": {
+              "additionalProperties": false,
+              "properties": {
+                "positionKm": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "xKm": {
+                      "type": "number",
+                    },
+                    "yKm": {
+                      "type": "number",
+                    },
+                    "zKm": {
+                      "type": "number",
+                    },
+                  },
+                  "required": [
+                    "xKm",
+                    "yKm",
+                    "zKm",
+                  ],
+                  "type": "object",
+                },
+                "tempsS": {
+                  "minimum": 0,
+                  "type": "number",
+                },
+              },
+              "required": [
+                "tempsS",
+                "positionKm",
+              ],
+              "type": "object",
+            },
+            "minItems": 2,
+            "type": "array",
+          },
+          "referentiel": {
+            "const": "lune-centre-inertiel",
+            "type": "string",
+          },
+        },
+        "required": [
+          "referentiel",
+          "orbite",
+          "positions",
+        ],
+        "type": "object",
+      },
+      "version": {
+        "const": 1,
+        "type": "number",
+      },
+    },
+    "required": [
+      "version",
+      "concept",
+      "trajectoires",
+      "chronologie",
+      "scene3d",
+      "notesModele",
+    ],
+    "type": "object",
+  },
+  "C2": {
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "additionalProperties": false,
+    "properties": {
+      "actes": {
+        "items": {
+          "additionalProperties": false,
+          "properties": {
+            "description": {
+              "additionalProperties": false,
+              "properties": {
+                "en": {
+                  "minLength": 1,
+                  "type": "string",
+                },
+                "fr": {
+                  "minLength": 1,
+                  "type": "string",
+                },
+              },
+              "required": [
+                "fr",
+                "en",
+              ],
+              "type": "object",
+            },
+            "id": {
+              "format": "uuid",
+              "pattern": "^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-4[0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12})$",
+              "type": "string",
+            },
+            "numero": {
+              "maximum": 6,
+              "minimum": 0,
+              "type": "integer",
+            },
+            "titre": {
+              "additionalProperties": false,
+              "properties": {
+                "en": {
+                  "minLength": 1,
+                  "type": "string",
+                },
+                "fr": {
+                  "minLength": 1,
+                  "type": "string",
+                },
+              },
+              "required": [
+                "fr",
+                "en",
+              ],
+              "type": "object",
+            },
+            "type": {
+              "minLength": 1,
+              "type": "string",
+            },
+          },
+          "required": [
+            "id",
+            "numero",
+            "titre",
+            "type",
+            "description",
+          ],
+          "type": "object",
+        },
+        "maxItems": 7,
+        "minItems": 7,
+        "type": "array",
+      },
+      "budgetMaxMUSD": {
+        "type": "number",
+      },
+      "catalogueAutorise": {
+        "items": {
+          "format": "uuid",
+          "pattern": "^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-4[0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12})$",
+          "type": "string",
+        },
+        "minItems": 1,
+        "type": "array",
+      },
+      "cible": {
+        "minLength": 1,
+        "type": "string",
+      },
+      "conditionsDeblocage": {
+        "items": {
+          "additionalProperties": false,
+          "properties": {
+            "finMinimale": {
+              "enum": [
+                "A",
+                "B",
+                "C",
+                "D",
+              ],
+              "type": "string",
+            },
+            "id": {
+              "format": "uuid",
+              "pattern": "^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-4[0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12})$",
+              "type": "string",
+            },
+            "scenarioPrerequis": {
+              "format": "uuid",
+              "pattern": "^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-4[0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12})$",
+              "type": "string",
+            },
+            "scoreMinimal": {
+              "type": "number",
+            },
+            "type": {
+              "enum": [
+                "prerequis",
+                "fin",
+                "score",
+              ],
+              "type": "string",
+            },
+          },
+          "required": [
+            "id",
+            "type",
+          ],
+          "type": "object",
+        },
+        "type": "array",
+      },
+      "definitionsEvenements": {
+        "items": {
+          "additionalProperties": false,
+          "properties": {
+            "ampleur": {
+              "minimum": 0,
+              "type": "number",
+            },
+            "cibleId": {
+              "format": "uuid",
+              "pattern": "^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-4[0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12})$",
+              "type": "string",
+            },
+            "id": {
+              "format": "uuid",
+              "pattern": "^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-4[0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12})$",
+              "type": "string",
+            },
+            "impact": {
+              "enum": [
+                "instrument",
+                "donnees",
+                "objectif",
+                "dureeVie",
+              ],
+              "type": "string",
+            },
+            "indice": {
+              "minLength": 1,
+              "type": "string",
+            },
+            "origine": {
+              "minLength": 1,
+              "type": "string",
+            },
+            "probabilite": {
+              "maximum": 1,
+              "minimum": 0,
+              "type": "number",
+            },
+            "type": {
+              "minLength": 1,
+              "type": "string",
+            },
+          },
+          "required": [
+            "id",
+            "type",
+            "origine",
+            "probabilite",
+            "impact",
+            "indice",
+          ],
+          "type": "object",
+        },
+        "type": "array",
+      },
+      "fins": {
+        "items": {
+          "additionalProperties": false,
+          "properties": {
+            "code": {
+              "enum": [
+                "A",
+                "B",
+                "C",
+                "D",
+              ],
+              "type": "string",
+            },
+            "conclusion": {
+              "additionalProperties": false,
+              "properties": {
+                "en": {
+                  "minLength": 1,
+                  "type": "string",
+                },
+                "fr": {
+                  "minLength": 1,
+                  "type": "string",
+                },
+              },
+              "required": [
+                "fr",
+                "en",
+              ],
+              "type": "object",
+            },
+            "regles": {
+              "items": {
+                "additionalProperties": {},
+                "propertyNames": {
+                  "type": "string",
+                },
+                "type": "object",
+              },
+              "type": "array",
+            },
+            "titre": {
+              "additionalProperties": false,
+              "properties": {
+                "en": {
+                  "minLength": 1,
+                  "type": "string",
+                },
+                "fr": {
+                  "minLength": 1,
+                  "type": "string",
+                },
+              },
+              "required": [
+                "fr",
+                "en",
+              ],
+              "type": "object",
+            },
+          },
+          "required": [
+            "code",
+            "titre",
+            "regles",
+            "conclusion",
+          ],
+          "type": "object",
+        },
+        "maxItems": 4,
+        "minItems": 4,
+        "type": "array",
+      },
+      "id": {
+        "format": "uuid",
+        "pattern": "^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-4[0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12})$",
+        "type": "string",
+      },
+      "objectifs": {
+        "items": {
+          "additionalProperties": false,
+          "properties": {
+            "id": {
+              "format": "uuid",
+              "pattern": "^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-4[0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12})$",
+              "type": "string",
+            },
+            "questionScientifique": {
+              "minLength": 1,
+              "type": "string",
+            },
+            "role": {
+              "minLength": 1,
+              "type": "string",
+            },
+            "titre": {
+              "minLength": 1,
+              "type": "string",
+            },
+          },
+          "required": [
+            "id",
+            "titre",
+            "questionScientifique",
+            "role",
+          ],
+          "type": "object",
+        },
+        "minItems": 1,
+        "type": "array",
+      },
+      "version": {
+        "minLength": 1,
+        "type": "string",
+      },
+    },
+    "required": [
+      "version",
+      "id",
+      "cible",
+      "budgetMaxMUSD",
+      "objectifs",
+      "catalogueAutorise",
+      "actes",
+      "definitionsEvenements",
+      "fins",
+      "conditionsDeblocage",
+    ],
+    "type": "object",
+  },
+  "C3": {
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "additionalProperties": false,
+    "properties": {
+      "bilans": {
+        "items": {
+          "additionalProperties": false,
+          "properties": {
+            "capacite": {
+              "type": "number",
+            },
+            "consomme": {
+              "type": "number",
+            },
+            "seuilAlerte": {
+              "type": "number",
+            },
+            "type": {
+              "minLength": 1,
+              "type": "string",
+            },
+          },
+          "required": [
+            "type",
+            "capacite",
+            "consomme",
+            "seuilAlerte",
+          ],
+          "type": "object",
+        },
+        "type": "array",
+      },
+      "configurationId": {
+        "format": "uuid",
+        "pattern": "^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-4[0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12})$",
+        "type": "string",
+      },
+      "difficulte": {
+        "enum": [
+          "decouverte",
+          "ingenieur",
+          "expert",
+        ],
+        "type": "string",
+      },
+      "lanceur": {
+        "additionalProperties": false,
+        "properties": {
+          "capaciteKg": {
+            "type": "number",
+          },
+          "fiabilite": {
+            "maximum": 1,
+            "minimum": 0,
+            "type": "number",
+          },
+          "id": {
+            "format": "uuid",
+            "pattern": "^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-4[0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12})$",
+            "type": "string",
+          },
+        },
+        "required": [
+          "id",
+          "capaciteKg",
+          "fiabilite",
+        ],
+        "type": "object",
+      },
+      "margeDv": {
+        "type": "number",
+      },
+      "objectifs": {
+        "additionalProperties": false,
+        "properties": {
+          "principal": {
+            "format": "uuid",
+            "pattern": "^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-4[0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12})$",
+            "type": "string",
+          },
+          "secondaires": {
+            "items": {
+              "format": "uuid",
+              "pattern": "^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-4[0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12})$",
+              "type": "string",
+            },
+            "type": "array",
+          },
+        },
+        "required": [
+          "principal",
+          "secondaires",
+        ],
+        "type": "object",
+      },
+      "orbite": {
+        "additionalProperties": false,
+        "properties": {
+          "altitudeKm": {
+            "type": "number",
+          },
+          "fractionEclipse": {
+            "maximum": 1,
+            "minimum": 0,
+            "type": "number",
+          },
+          "inclinaisonDeg": {
+            "type": "number",
+          },
+          "type": {
+            "enum": [
+              "polaire",
+              "circulaireBasse",
+              "elliptique",
+            ],
+            "type": "string",
+          },
+        },
+        "required": [
+          "type",
+          "altitudeKm",
+          "inclinaisonDeg",
+          "fractionEclipse",
+        ],
+        "type": "object",
+      },
+      "orbiteur": {
+        "additionalProperties": false,
+        "properties": {
+          "capaciteBatterieWh": {
+            "type": "number",
+          },
+          "carburantKg": {
+            "type": "number",
+          },
+          "coutMUSD": {
+            "type": "number",
+          },
+          "elements": {
+            "items": {
+              "additionalProperties": false,
+              "properties": {
+                "categorie": {
+                  "minLength": 1,
+                  "type": "string",
+                },
+                "costMUSD": {
+                  "type": "number",
+                },
+                "dutyCycle": {
+                  "maximum": 1,
+                  "minimum": 0,
+                  "type": "number",
+                },
+                "fiabilite": {
+                  "maximum": 1,
+                  "minimum": 0,
+                  "type": "number",
+                },
+                "idCatalogue": {
+                  "format": "uuid",
+                  "pattern": "^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-4[0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12})$",
+                  "type": "string",
+                },
+                "masseKg": {
+                  "type": "number",
+                },
+                "powerW": {
+                  "type": "number",
+                },
+              },
+              "required": [
+                "idCatalogue",
+                "categorie",
+                "masseKg",
+                "powerW",
+                "costMUSD",
+                "fiabilite",
+              ],
+              "type": "object",
+            },
+            "type": "array",
+          },
+          "instruments": {
+            "items": {
+              "additionalProperties": false,
+              "properties": {
+                "costMUSD": {
+                  "type": "number",
+                },
+                "dataMbps": {
+                  "type": "number",
+                },
+                "dutyCycle": {
+                  "maximum": 1,
+                  "minimum": 0,
+                  "type": "number",
+                },
+                "fiabilite": {
+                  "maximum": 1,
+                  "minimum": 0,
+                  "type": "number",
+                },
+                "idCatalogue": {
+                  "format": "uuid",
+                  "pattern": "^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-4[0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12})$",
+                  "type": "string",
+                },
+                "masseKg": {
+                  "type": "number",
+                },
+                "missionsReelles": {
+                  "items": {
+                    "minLength": 1,
+                    "type": "string",
+                  },
+                  "type": "array",
+                },
+                "objectifs": {
+                  "items": {
+                    "format": "uuid",
+                    "pattern": "^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-4[0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12})$",
+                    "type": "string",
+                  },
+                  "minItems": 1,
+                  "type": "array",
+                },
+                "powerW": {
+                  "type": "number",
+                },
+                "valeurScientifique": {
+                  "type": "number",
+                },
+              },
+              "required": [
+                "idCatalogue",
+                "masseKg",
+                "powerW",
+                "costMUSD",
+                "dataMbps",
+                "valeurScientifique",
+                "fiabilite",
+              ],
+              "type": "object",
+            },
+            "type": "array",
+          },
+          "masseSecheKg": {
+            "type": "number",
+          },
+          "puissanceConsommeeW": {
+            "type": "number",
+          },
+          "puissanceProduiteW": {
+            "type": "number",
+          },
+        },
+        "required": [
+          "masseSecheKg",
+          "carburantKg",
+          "puissanceProduiteW",
+          "puissanceConsommeeW",
+          "capaciteBatterieWh",
+          "coutMUSD",
+          "elements",
+          "instruments",
+        ],
+        "type": "object",
+      },
+      "profilOperations": {
+        "additionalProperties": false,
+        "properties": {
+          "anomalieScenarisee": {
+            "additionalProperties": false,
+            "properties": {
+              "facteurProduction": {
+                "maximum": 1,
+                "minimum": 0,
+                "type": "number",
+              },
+              "jour": {
+                "exclusiveMinimum": 0,
+                "maximum": 9007199254740991,
+                "type": "integer",
+              },
+            },
+            "required": [
+              "jour",
+              "facteurProduction",
+            ],
+            "type": "object",
+          },
+          "batterieInitialeWh": {
+            "minimum": 0,
+            "type": "number",
+          },
+          "capaciteStockageGbit": {
+            "minimum": 0,
+            "type": "number",
+          },
+          "crise": {
+            "additionalProperties": false,
+            "properties": {
+              "delaiDecisionJours": {
+                "exclusiveMinimum": 0,
+                "maximum": 9007199254740991,
+                "type": "integer",
+              },
+              "dureeSuspensionObservationsJours": {
+                "exclusiveMinimum": 0,
+                "maximum": 9007199254740991,
+                "type": "integer",
+              },
+              "facteurBasseConsommation": {
+                "maximum": 1,
+                "minimum": 0,
+                "type": "number",
+              },
+              "facteurTransmission": {
+                "maximum": 1,
+                "minimum": 0,
+                "type": "number",
+              },
+              "penaliteRisqueAccru": {
+                "maximum": 1,
+                "minimum": 0,
+                "type": "number",
+              },
+            },
+            "required": [
+              "delaiDecisionJours",
+              "facteurTransmission",
+              "dureeSuspensionObservationsJours",
+              "facteurBasseConsommation",
+              "penaliteRisqueAccru",
+            ],
+            "type": "object",
+          },
+          "debitLiaisonMbps": {
+            "minimum": 0,
+            "type": "number",
+          },
+          "dureeCibleJours": {
+            "exclusiveMinimum": 0,
+            "maximum": 9007199254740991,
+            "type": "integer",
+          },
+          "ispS": {
+            "exclusiveMinimum": 0,
+            "type": "number",
+          },
+          "limitesVieJours": {
+            "additionalProperties": false,
+            "properties": {
+              "autonomieCarburant": {
+                "exclusiveMinimum": 0,
+                "type": "number",
+              },
+              "degradationPanneaux": {
+                "exclusiveMinimum": 0,
+                "type": "number",
+              },
+              "toleranceRadiation": {
+                "exclusiveMinimum": 0,
+                "type": "number",
+              },
+            },
+            "required": [
+              "degradationPanneaux",
+              "autonomieCarburant",
+              "toleranceRadiation",
+            ],
+            "type": "object",
+          },
+          "mtbfJoursParSysteme": {
+            "additionalProperties": {
+              "exclusiveMinimum": 0,
+              "type": "number",
+            },
+            "propertyNames": {
+              "format": "uuid",
+              "pattern": "^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-4[0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12})$",
+              "type": "string",
+            },
+            "type": "object",
+          },
+          "reserveDeltaVms": {
+            "minimum": 0,
+            "type": "number",
+          },
+          "seuilBatterieCritique": {
+            "maximum": 1,
+            "minimum": 0,
+            "type": "number",
+          },
+          "seuilBatterieDegrade": {
+            "maximum": 1,
+            "minimum": 0,
+            "type": "number",
+          },
+          "source": {
+            "minLength": 1,
+            "type": "string",
+          },
+          "tempsContactSParJour": {
+            "minimum": 0,
+            "type": "number",
+          },
+          "tempsObservationSParJour": {
+            "minimum": 0,
+            "type": "number",
+          },
+        },
+        "required": [
+          "source",
+          "dureeCibleJours",
+          "batterieInitialeWh",
+          "capaciteStockageGbit",
+          "debitLiaisonMbps",
+          "tempsContactSParJour",
+          "tempsObservationSParJour",
+          "reserveDeltaVms",
+          "ispS",
+          "seuilBatterieDegrade",
+          "seuilBatterieCritique",
+          "mtbfJoursParSysteme",
+          "limitesVieJours",
+          "crise",
+        ],
+        "type": "object",
+      },
+      "scenarioId": {
+        "format": "uuid",
+        "pattern": "^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-4[0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12})$",
+        "type": "string",
+      },
+      "version": {
+        "exclusiveMinimum": 0,
+        "maximum": 9007199254740991,
+        "type": "integer",
+      },
+      "versionCatalogue": {
+        "minLength": 1,
+        "type": "string",
+      },
+      "versionScenario": {
+        "minLength": 1,
+        "type": "string",
+      },
+    },
+    "required": [
+      "version",
+      "configurationId",
+      "scenarioId",
+      "versionScenario",
+      "versionCatalogue",
+      "orbiteur",
+      "orbite",
+      "lanceur",
+      "objectifs",
+      "margeDv",
+      "difficulte",
+      "bilans",
+    ],
+    "type": "object",
+  },
+  "C4": {
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "additionalProperties": false,
+    "properties": {
+      "carburantRestantKg": {
+        "type": "number",
+      },
+      "decisionsCrise": {
+        "items": {
+          "additionalProperties": false,
+          "properties": {
+            "choix": {
+              "enum": [
+                "desactiver-instrument",
+                "reduire-transmissions",
+                "suspendre-observations",
+                "basse-consommation",
+                "poursuivre",
+              ],
+              "type": "string",
+            },
+            "cibleId": {
+              "format": "uuid",
+              "pattern": "^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-4[0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12})$",
+              "type": "string",
+            },
+            "id": {
+              "format": "uuid",
+              "pattern": "^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-4[0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12})$",
+              "type": "string",
+            },
+            "jour": {
+              "maximum": 9007199254740991,
+              "minimum": 0,
+              "type": "integer",
+            },
+          },
+          "required": [
+            "id",
+            "choix",
+            "jour",
+          ],
+          "type": "object",
+        },
+        "type": "array",
+      },
+      "donneesGenereesGbit": {
+        "minimum": 0,
+        "type": "number",
+      },
+      "donneesPerduesGbit": {
+        "type": "number",
+      },
+      "donneesTransmisesGbit": {
+        "minimum": 0,
+        "type": "number",
+      },
+      "dureeSimuleeJours": {
+        "maximum": 9007199254740991,
+        "minimum": 0,
+        "type": "integer",
+      },
+      "evenements": {
+        "items": {
+          "additionalProperties": false,
+          "properties": {
+            "ampleur": {
+              "minimum": 0,
+              "type": "number",
+            },
+            "cibleId": {
+              "format": "uuid",
+              "pattern": "^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-4[0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12})$",
+              "type": "string",
+            },
+            "id": {
+              "format": "uuid",
+              "pattern": "^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-4[0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12})$",
+              "type": "string",
+            },
+            "impact": {
+              "enum": [
+                "instrument",
+                "donnees",
+                "objectif",
+                "dureeVie",
+              ],
+              "type": "string",
+            },
+            "indice": {
+              "minLength": 1,
+              "type": "string",
+            },
+            "jour": {
+              "maximum": 9007199254740991,
+              "minimum": 0,
+              "type": "integer",
+            },
+            "origine": {
+              "minLength": 1,
+              "type": "string",
+            },
+            "type": {
+              "minLength": 1,
+              "type": "string",
+            },
+          },
+          "required": [
+            "id",
+            "type",
+            "jour",
+            "origine",
+            "impact",
+          ],
+          "type": "object",
+        },
+        "type": "array",
+      },
+      "graine": {
+        "maximum": 9007199254740991,
+        "minimum": -9007199254740991,
+        "type": "integer",
+      },
+      "issue": {
+        "enum": [
+          "nominale",
+          "ecourtee",
+          "perdue",
+        ],
+        "type": "string",
+      },
+      "progressionScientifiqueParObjectif": {
+        "additionalProperties": {
+          "additionalProperties": false,
+          "properties": {
+            "cumulee": {
+              "minimum": 0,
+              "type": "number",
+            },
+            "maximum": {
+              "minimum": 0,
+              "type": "number",
+            },
+          },
+          "required": [
+            "cumulee",
+            "maximum",
+          ],
+          "type": "object",
+        },
+        "propertyNames": {
+          "format": "uuid",
+          "pattern": "^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-4[0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12})$",
+          "type": "string",
+        },
+        "type": "object",
+      },
+      "scienceCumulee": {
+        "type": "number",
+      },
+      "scienceMax": {
+        "type": "number",
+      },
+      "serie": {
+        "items": {
+          "additionalProperties": false,
+          "properties": {
+            "batterieWh": {
+              "type": "number",
+            },
+            "disponibilite": {
+              "maximum": 1,
+              "minimum": 0,
+              "type": "number",
+            },
+            "donneesGenereesGbit": {
+              "minimum": 0,
+              "type": "number",
+            },
+            "donneesPerduesGbit": {
+              "minimum": 0,
+              "type": "number",
+            },
+            "donneesTransmisesGbit": {
+              "minimum": 0,
+              "type": "number",
+            },
+            "jour": {
+              "maximum": 9007199254740991,
+              "minimum": 0,
+              "type": "integer",
+            },
+            "marges": {
+              "additionalProperties": false,
+              "properties": {
+                "batterie": {
+                  "maximum": 1,
+                  "minimum": 0,
+                  "type": "number",
+                },
+                "carburant": {
+                  "maximum": 1,
+                  "minimum": 0,
+                  "type": "number",
+                },
+                "deltaV": {
+                  "maximum": 1,
+                  "minimum": 0,
+                  "type": "number",
+                },
+                "stockage": {
+                  "maximum": 1,
+                  "minimum": 0,
+                  "type": "number",
+                },
+              },
+              "required": [
+                "batterie",
+                "stockage",
+                "deltaV",
+                "carburant",
+              ],
+              "type": "object",
+            },
+            "puissanceW": {
+              "type": "number",
+            },
+            "science": {
+              "type": "number",
+            },
+            "scienceParObjectif": {
+              "additionalProperties": {
+                "minimum": 0,
+                "type": "number",
+              },
+              "propertyNames": {
+                "format": "uuid",
+                "pattern": "^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-4[0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12})$",
+                "type": "string",
+              },
+              "type": "object",
+            },
+            "tamponGbit": {
+              "type": "number",
+            },
+          },
+          "required": [
+            "jour",
+            "puissanceW",
+            "batterieWh",
+            "tamponGbit",
+            "science",
+          ],
+          "type": "object",
+        },
+        "type": "array",
+      },
+      "simulationId": {
+        "format": "uuid",
+        "pattern": "^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-4[0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12})$",
+        "type": "string",
+      },
+      "sousSystemes": {
+        "additionalProperties": {
+          "enum": [
+            "operationnel",
+            "degrade",
+            "critique",
+            "horsLigne",
+          ],
+          "type": "string",
+        },
+        "propertyNames": {
+          "format": "uuid",
+          "pattern": "^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-4[0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12})$",
+          "type": "string",
+        },
+        "type": "object",
+      },
+      "version": {
+        "exclusiveMinimum": 0,
+        "maximum": 9007199254740991,
+        "type": "integer",
+      },
+    },
+    "required": [
+      "version",
+      "simulationId",
+      "graine",
+      "dureeSimuleeJours",
+      "issue",
+      "serie",
+      "evenements",
+      "decisionsCrise",
+      "sousSystemes",
+      "scienceCumulee",
+      "scienceMax",
+      "donneesPerduesGbit",
+      "carburantRestantKg",
+    ],
+    "type": "object",
+  },
+  "C5": {
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "anyOf": [
+      {
+        "additionalProperties": false,
+        "properties": {
+          "causes": {
+            "items": {
+              "additionalProperties": false,
+              "properties": {
+                "code": {
+                  "minLength": 1,
+                  "type": "string",
+                },
+                "params": {
+                  "additionalProperties": {
+                    "type": [
+                      "number",
+                      "string",
+                    ],
+                  },
+                  "propertyNames": {
+                    "type": "string",
+                  },
+                  "type": "object",
+                },
+                "version": {
+                  "exclusiveMinimum": 0,
+                  "maximum": 9007199254740991,
+                  "type": "integer",
+                },
+              },
+              "required": [
+                "version",
+                "code",
+                "params",
+              ],
+              "type": "object",
+            },
+            "type": "array",
+          },
+          "decisionsCles": {
+            "items": {
+              "format": "uuid",
+              "pattern": "^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-4[0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12})$",
+              "type": "string",
+            },
+            "type": "array",
+          },
+          "fin": {
+            "enum": [
+              "A",
+              "B",
+              "C",
+              "D",
+            ],
+            "type": "string",
+          },
+          "missionRef": {
+            "format": "uuid",
+            "pattern": "^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-4[0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12})$",
+            "type": "string",
+          },
+          "recommandations": {
+            "items": {
+              "additionalProperties": false,
+              "properties": {
+                "code": {
+                  "minLength": 1,
+                  "type": "string",
+                },
+                "params": {
+                  "additionalProperties": {
+                    "type": [
+                      "number",
+                      "string",
+                    ],
+                  },
+                  "propertyNames": {
+                    "type": "string",
+                  },
+                  "type": "object",
+                },
+                "version": {
+                  "exclusiveMinimum": 0,
+                  "maximum": 9007199254740991,
+                  "type": "integer",
+                },
+              },
+              "required": [
+                "version",
+                "code",
+                "params",
+              ],
+              "type": "object",
+            },
+            "type": "array",
+          },
+          "scoreTotal": {
+            "maximum": 1000,
+            "minimum": 0,
+            "type": "number",
+          },
+          "scores": {
+            "additionalProperties": false,
+            "properties": {
+              "collab": {
+                "maximum": 100,
+                "minimum": 0,
+                "type": "number",
+              },
+              "fiabilite": {
+                "maximum": 150,
+                "minimum": 0,
+                "type": "number",
+              },
+              "ressources": {
+                "maximum": 200,
+                "minimum": 0,
+                "type": "number",
+              },
+              "science": {
+                "maximum": 300,
+                "minimum": 0,
+                "type": "number",
+              },
+              "technique": {
+                "maximum": 250,
+                "minimum": 0,
+                "type": "number",
+              },
+            },
+            "required": [
+              "science",
+              "technique",
+              "ressources",
+              "fiabilite",
+              "collab",
+            ],
+            "type": "object",
+          },
+          "version": {
+            "const": 1,
+            "type": "number",
+          },
+        },
+        "required": [
+          "version",
+          "missionRef",
+          "scoreTotal",
+          "fin",
+          "causes",
+          "decisionsCles",
+          "recommandations",
+          "scores",
+        ],
+        "type": "object",
+      },
+      {
+        "oneOf": [
+          {
+            "additionalProperties": false,
+            "properties": {
+              "causes": {
+                "items": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "code": {
+                      "minLength": 1,
+                      "type": "string",
+                    },
+                    "params": {
+                      "additionalProperties": {
+                        "type": [
+                          "number",
+                          "string",
+                        ],
+                      },
+                      "propertyNames": {
+                        "type": "string",
+                      },
+                      "type": "object",
+                    },
+                    "version": {
+                      "exclusiveMinimum": 0,
+                      "maximum": 9007199254740991,
+                      "type": "integer",
+                    },
+                  },
+                  "required": [
+                    "version",
+                    "code",
+                    "params",
+                  ],
+                  "type": "object",
+                },
+                "type": "array",
+              },
+              "decisionsCles": {
+                "items": {
+                  "format": "uuid",
+                  "pattern": "^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-4[0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12})$",
+                  "type": "string",
+                },
+                "type": "array",
+              },
+              "fin": {
+                "enum": [
+                  "A",
+                  "B",
+                  "C",
+                  "D",
+                ],
+                "type": "string",
+              },
+              "missionRef": {
+                "format": "uuid",
+                "pattern": "^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-4[0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12})$",
+                "type": "string",
+              },
+              "mode": {
+                "const": "solo",
+                "type": "string",
+              },
+              "recommandations": {
+                "items": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "piste": {
+                      "additionalProperties": false,
+                      "properties": {
+                        "code": {
+                          "minLength": 1,
+                          "type": "string",
+                        },
+                        "params": {
+                          "additionalProperties": {
+                            "type": [
+                              "number",
+                              "string",
+                            ],
+                          },
+                          "propertyNames": {
+                            "type": "string",
+                          },
+                          "type": "object",
+                        },
+                        "version": {
+                          "exclusiveMinimum": 0,
+                          "maximum": 9007199254740991,
+                          "type": "integer",
+                        },
+                      },
+                      "required": [
+                        "version",
+                        "code",
+                        "params",
+                      ],
+                      "type": "object",
+                    },
+                    "pourquoi": {
+                      "additionalProperties": false,
+                      "properties": {
+                        "code": {
+                          "minLength": 1,
+                          "type": "string",
+                        },
+                        "params": {
+                          "additionalProperties": {
+                            "type": [
+                              "number",
+                              "string",
+                            ],
+                          },
+                          "propertyNames": {
+                            "type": "string",
+                          },
+                          "type": "object",
+                        },
+                        "version": {
+                          "exclusiveMinimum": 0,
+                          "maximum": 9007199254740991,
+                          "type": "integer",
+                        },
+                      },
+                      "required": [
+                        "version",
+                        "code",
+                        "params",
+                      ],
+                      "type": "object",
+                    },
+                  },
+                  "required": [
+                    "pourquoi",
+                    "piste",
+                  ],
+                  "type": "object",
+                },
+                "type": "array",
+              },
+              "scoreTotal": {
+                "maximum": 1000,
+                "minimum": 0,
+                "type": "number",
+              },
+              "scores": {
+                "additionalProperties": false,
+                "properties": {
+                  "collab": {
+                    "const": 0,
+                    "type": "number",
+                  },
+                  "fiabilite": {
+                    "maximum": 166.66666666666666,
+                    "minimum": 0,
+                    "type": "number",
+                  },
+                  "ressources": {
+                    "maximum": 222.22222222222223,
+                    "minimum": 0,
+                    "type": "number",
+                  },
+                  "science": {
+                    "maximum": 333.3333333333333,
+                    "minimum": 0,
+                    "type": "number",
+                  },
+                  "technique": {
+                    "maximum": 277.77777777777777,
+                    "minimum": 0,
+                    "type": "number",
+                  },
+                },
+                "required": [
+                  "science",
+                  "technique",
+                  "ressources",
+                  "fiabilite",
+                  "collab",
+                ],
+                "type": "object",
+              },
+              "version": {
+                "const": 2,
+                "type": "number",
+              },
+            },
+            "required": [
+              "version",
+              "missionRef",
+              "scoreTotal",
+              "fin",
+              "causes",
+              "decisionsCles",
+              "mode",
+              "scores",
+              "recommandations",
+            ],
+            "type": "object",
+          },
+          {
+            "additionalProperties": false,
+            "properties": {
+              "causes": {
+                "items": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "code": {
+                      "minLength": 1,
+                      "type": "string",
+                    },
+                    "params": {
+                      "additionalProperties": {
+                        "type": [
+                          "number",
+                          "string",
+                        ],
+                      },
+                      "propertyNames": {
+                        "type": "string",
+                      },
+                      "type": "object",
+                    },
+                    "version": {
+                      "exclusiveMinimum": 0,
+                      "maximum": 9007199254740991,
+                      "type": "integer",
+                    },
+                  },
+                  "required": [
+                    "version",
+                    "code",
+                    "params",
+                  ],
+                  "type": "object",
+                },
+                "type": "array",
+              },
+              "decisionsCles": {
+                "items": {
+                  "format": "uuid",
+                  "pattern": "^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-4[0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12})$",
+                  "type": "string",
+                },
+                "type": "array",
+              },
+              "fin": {
+                "enum": [
+                  "A",
+                  "B",
+                  "C",
+                  "D",
+                ],
+                "type": "string",
+              },
+              "missionRef": {
+                "format": "uuid",
+                "pattern": "^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-4[0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12})$",
+                "type": "string",
+              },
+              "mode": {
+                "const": "equipe",
+                "type": "string",
+              },
+              "recommandations": {
+                "items": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "piste": {
+                      "additionalProperties": false,
+                      "properties": {
+                        "code": {
+                          "minLength": 1,
+                          "type": "string",
+                        },
+                        "params": {
+                          "additionalProperties": {
+                            "type": [
+                              "number",
+                              "string",
+                            ],
+                          },
+                          "propertyNames": {
+                            "type": "string",
+                          },
+                          "type": "object",
+                        },
+                        "version": {
+                          "exclusiveMinimum": 0,
+                          "maximum": 9007199254740991,
+                          "type": "integer",
+                        },
+                      },
+                      "required": [
+                        "version",
+                        "code",
+                        "params",
+                      ],
+                      "type": "object",
+                    },
+                    "pourquoi": {
+                      "additionalProperties": false,
+                      "properties": {
+                        "code": {
+                          "minLength": 1,
+                          "type": "string",
+                        },
+                        "params": {
+                          "additionalProperties": {
+                            "type": [
+                              "number",
+                              "string",
+                            ],
+                          },
+                          "propertyNames": {
+                            "type": "string",
+                          },
+                          "type": "object",
+                        },
+                        "version": {
+                          "exclusiveMinimum": 0,
+                          "maximum": 9007199254740991,
+                          "type": "integer",
+                        },
+                      },
+                      "required": [
+                        "version",
+                        "code",
+                        "params",
+                      ],
+                      "type": "object",
+                    },
+                  },
+                  "required": [
+                    "pourquoi",
+                    "piste",
+                  ],
+                  "type": "object",
+                },
+                "type": "array",
+              },
+              "scoreTotal": {
+                "maximum": 1000,
+                "minimum": 0,
+                "type": "number",
+              },
+              "scores": {
+                "additionalProperties": false,
+                "properties": {
+                  "collab": {
+                    "maximum": 100,
+                    "minimum": 0,
+                    "type": "number",
+                  },
+                  "fiabilite": {
+                    "maximum": 150,
+                    "minimum": 0,
+                    "type": "number",
+                  },
+                  "ressources": {
+                    "maximum": 200,
+                    "minimum": 0,
+                    "type": "number",
+                  },
+                  "science": {
+                    "maximum": 300,
+                    "minimum": 0,
+                    "type": "number",
+                  },
+                  "technique": {
+                    "maximum": 250,
+                    "minimum": 0,
+                    "type": "number",
+                  },
+                },
+                "required": [
+                  "science",
+                  "technique",
+                  "ressources",
+                  "fiabilite",
+                  "collab",
+                ],
+                "type": "object",
+              },
+              "version": {
+                "const": 2,
+                "type": "number",
+              },
+            },
+            "required": [
+              "version",
+              "missionRef",
+              "scoreTotal",
+              "fin",
+              "causes",
+              "decisionsCles",
+              "mode",
+              "scores",
+              "recommandations",
+            ],
+            "type": "object",
+          },
+        ],
+      },
+    ],
+  },
+  "C6": {
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "additionalProperties": false,
+    "properties": {
+      "delta": {
+        "additionalProperties": {},
+        "propertyNames": {
+          "type": "string",
+        },
+        "type": "object",
+      },
+      "missionId": {
+        "format": "uuid",
+        "pattern": "^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-4[0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12})$",
+        "type": "string",
+      },
+      "propositionId": {
+        "format": "uuid",
+        "pattern": "^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-4[0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12})$",
+        "type": "string",
+      },
+      "version": {
+        "exclusiveMinimum": 0,
+        "maximum": 9007199254740991,
+        "type": "integer",
+      },
+    },
+    "required": [
+      "version",
+      "propositionId",
+      "missionId",
+      "delta",
+    ],
+    "type": "object",
+  },
+  "C7": {
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "additionalProperties": false,
+    "properties": {
+      "code": {
+        "minLength": 1,
+        "type": "string",
+      },
+      "params": {
+        "additionalProperties": {
+          "type": [
+            "number",
+            "string",
+          ],
+        },
+        "propertyNames": {
+          "type": "string",
+        },
+        "type": "object",
+      },
+      "version": {
+        "exclusiveMinimum": 0,
+        "maximum": 9007199254740991,
+        "type": "integer",
+      },
+    },
+    "required": [
+      "version",
+      "code",
+      "params",
+    ],
+    "type": "object",
+  },
+  "C8": {
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "additionalProperties": false,
+    "properties": {
+      "id": {
+        "format": "uuid",
+        "pattern": "^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-4[0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12})$",
+        "type": "string",
+      },
+      "langue": {
+        "enum": [
+          "fr",
+          "en",
+        ],
+        "type": "string",
+      },
+      "version": {
+        "exclusiveMinimum": 0,
+        "maximum": 9007199254740991,
+        "type": "integer",
+      },
+    },
+    "required": [
+      "version",
+      "id",
+      "langue",
+    ],
+    "type": "object",
+  },
+  "C9": {
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "oneOf": [
+      {
+        "additionalProperties": false,
+        "properties": {
+          "missionId": {
+            "format": "uuid",
+            "pattern": "^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-4[0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12})$",
+            "type": "string",
+          },
+          "scenarioId": {
+            "format": "uuid",
+            "pattern": "^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-4[0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12})$",
+            "type": "string",
+          },
+          "type": {
+            "const": "MissionCréée",
+            "type": "string",
+          },
+          "utilisateurId": {
+            "format": "uuid",
+            "pattern": "^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-4[0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12})$",
+            "type": "string",
+          },
+          "version": {
+            "exclusiveMinimum": 0,
+            "maximum": 9007199254740991,
+            "type": "integer",
+          },
+          "versionScenario": {
+            "minLength": 1,
+            "type": "string",
+          },
+        },
+        "required": [
+          "type",
+          "version",
+          "missionId",
+          "scenarioId",
+          "versionScenario",
+          "utilisateurId",
+        ],
+        "type": "object",
+      },
+      {
+        "additionalProperties": false,
+        "properties": {
+          "configurationId": {
+            "format": "uuid",
+            "pattern": "^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-4[0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12})$",
+            "type": "string",
+          },
+          "missionId": {
+            "format": "uuid",
+            "pattern": "^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-4[0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12})$",
+            "type": "string",
+          },
+          "type": {
+            "const": "ConceptionValidée",
+            "type": "string",
+          },
+          "version": {
+            "exclusiveMinimum": 0,
+            "maximum": 9007199254740991,
+            "type": "integer",
+          },
+          "versionConfiguration": {
+            "exclusiveMinimum": 0,
+            "maximum": 9007199254740991,
+            "type": "integer",
+          },
+        },
+        "required": [
+          "type",
+          "version",
+          "missionId",
+          "configurationId",
+          "versionConfiguration",
+        ],
+        "type": "object",
+      },
+      {
+        "additionalProperties": false,
+        "properties": {
+          "graine": {
+            "maximum": 9007199254740991,
+            "minimum": -9007199254740991,
+            "type": "integer",
+          },
+          "missionId": {
+            "format": "uuid",
+            "pattern": "^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-4[0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12})$",
+            "type": "string",
+          },
+          "simulationId": {
+            "format": "uuid",
+            "pattern": "^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-4[0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12})$",
+            "type": "string",
+          },
+          "type": {
+            "const": "MissionLancée",
+            "type": "string",
+          },
+          "version": {
+            "exclusiveMinimum": 0,
+            "maximum": 9007199254740991,
+            "type": "integer",
+          },
+        },
+        "required": [
+          "type",
+          "version",
+          "missionId",
+          "simulationId",
+          "graine",
+        ],
+        "type": "object",
+      },
+      {
+        "additionalProperties": false,
+        "properties": {
+          "code": {
+            "additionalProperties": false,
+            "properties": {
+              "code": {
+                "minLength": 1,
+                "type": "string",
+              },
+              "params": {
+                "additionalProperties": {
+                  "type": [
+                    "number",
+                    "string",
+                  ],
+                },
+                "propertyNames": {
+                  "type": "string",
+                },
+                "type": "object",
+              },
+              "version": {
+                "exclusiveMinimum": 0,
+                "maximum": 9007199254740991,
+                "type": "integer",
+              },
+            },
+            "required": [
+              "version",
+              "code",
+              "params",
+            ],
+            "type": "object",
+          },
+          "jour": {
+            "maximum": 9007199254740991,
+            "minimum": 0,
+            "type": "integer",
+          },
+          "missionId": {
+            "format": "uuid",
+            "pattern": "^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-4[0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12})$",
+            "type": "string",
+          },
+          "type": {
+            "const": "AnomalieDétectée",
+            "type": "string",
+          },
+          "version": {
+            "exclusiveMinimum": 0,
+            "maximum": 9007199254740991,
+            "type": "integer",
+          },
+        },
+        "required": [
+          "type",
+          "version",
+          "missionId",
+          "jour",
+          "code",
+        ],
+        "type": "object",
+      },
+      {
+        "additionalProperties": false,
+        "properties": {
+          "choix": {
+            "minLength": 1,
+            "type": "string",
+          },
+          "jour": {
+            "maximum": 9007199254740991,
+            "minimum": 0,
+            "type": "integer",
+          },
+          "missionId": {
+            "format": "uuid",
+            "pattern": "^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-4[0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12})$",
+            "type": "string",
+          },
+          "type": {
+            "const": "CriseDécidée",
+            "type": "string",
+          },
+          "version": {
+            "exclusiveMinimum": 0,
+            "maximum": 9007199254740991,
+            "type": "integer",
+          },
+        },
+        "required": [
+          "type",
+          "version",
+          "missionId",
+          "jour",
+          "choix",
+        ],
+        "type": "object",
+      },
+      {
+        "additionalProperties": false,
+        "properties": {
+          "issue": {
+            "enum": [
+              "nominale",
+              "ecourtee",
+              "perdue",
+            ],
+            "type": "string",
+          },
+          "missionId": {
+            "format": "uuid",
+            "pattern": "^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-4[0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12})$",
+            "type": "string",
+          },
+          "simulationId": {
+            "format": "uuid",
+            "pattern": "^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-4[0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12})$",
+            "type": "string",
+          },
+          "type": {
+            "const": "SimulationTerminée",
+            "type": "string",
+          },
+          "version": {
+            "exclusiveMinimum": 0,
+            "maximum": 9007199254740991,
+            "type": "integer",
+          },
+        },
+        "required": [
+          "type",
+          "version",
+          "missionId",
+          "simulationId",
+          "issue",
+        ],
+        "type": "object",
+      },
+      {
+        "additionalProperties": false,
+        "properties": {
+          "bilan": {
+            "anyOf": [
+              {
+                "additionalProperties": false,
+                "properties": {
+                  "causes": {
+                    "items": {
+                      "additionalProperties": false,
+                      "properties": {
+                        "code": {
+                          "minLength": 1,
+                          "type": "string",
+                        },
+                        "params": {
+                          "additionalProperties": {
+                            "type": [
+                              "number",
+                              "string",
+                            ],
+                          },
+                          "propertyNames": {
+                            "type": "string",
+                          },
+                          "type": "object",
+                        },
+                        "version": {
+                          "exclusiveMinimum": 0,
+                          "maximum": 9007199254740991,
+                          "type": "integer",
+                        },
+                      },
+                      "required": [
+                        "version",
+                        "code",
+                        "params",
+                      ],
+                      "type": "object",
+                    },
+                    "type": "array",
+                  },
+                  "decisionsCles": {
+                    "items": {
+                      "format": "uuid",
+                      "pattern": "^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-4[0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12})$",
+                      "type": "string",
+                    },
+                    "type": "array",
+                  },
+                  "fin": {
+                    "enum": [
+                      "A",
+                      "B",
+                      "C",
+                      "D",
+                    ],
+                    "type": "string",
+                  },
+                  "missionRef": {
+                    "format": "uuid",
+                    "pattern": "^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-4[0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12})$",
+                    "type": "string",
+                  },
+                  "recommandations": {
+                    "items": {
+                      "additionalProperties": false,
+                      "properties": {
+                        "code": {
+                          "minLength": 1,
+                          "type": "string",
+                        },
+                        "params": {
+                          "additionalProperties": {
+                            "type": [
+                              "number",
+                              "string",
+                            ],
+                          },
+                          "propertyNames": {
+                            "type": "string",
+                          },
+                          "type": "object",
+                        },
+                        "version": {
+                          "exclusiveMinimum": 0,
+                          "maximum": 9007199254740991,
+                          "type": "integer",
+                        },
+                      },
+                      "required": [
+                        "version",
+                        "code",
+                        "params",
+                      ],
+                      "type": "object",
+                    },
+                    "type": "array",
+                  },
+                  "scoreTotal": {
+                    "maximum": 1000,
+                    "minimum": 0,
+                    "type": "number",
+                  },
+                  "scores": {
+                    "additionalProperties": false,
+                    "properties": {
+                      "collab": {
+                        "maximum": 100,
+                        "minimum": 0,
+                        "type": "number",
+                      },
+                      "fiabilite": {
+                        "maximum": 150,
+                        "minimum": 0,
+                        "type": "number",
+                      },
+                      "ressources": {
+                        "maximum": 200,
+                        "minimum": 0,
+                        "type": "number",
+                      },
+                      "science": {
+                        "maximum": 300,
+                        "minimum": 0,
+                        "type": "number",
+                      },
+                      "technique": {
+                        "maximum": 250,
+                        "minimum": 0,
+                        "type": "number",
+                      },
+                    },
+                    "required": [
+                      "science",
+                      "technique",
+                      "ressources",
+                      "fiabilite",
+                      "collab",
+                    ],
+                    "type": "object",
+                  },
+                  "version": {
+                    "const": 1,
+                    "type": "number",
+                  },
+                },
+                "required": [
+                  "version",
+                  "missionRef",
+                  "scoreTotal",
+                  "fin",
+                  "causes",
+                  "decisionsCles",
+                  "recommandations",
+                  "scores",
+                ],
+                "type": "object",
+              },
+              {
+                "oneOf": [
+                  {
+                    "additionalProperties": false,
+                    "properties": {
+                      "causes": {
+                        "items": {
+                          "additionalProperties": false,
+                          "properties": {
+                            "code": {
+                              "minLength": 1,
+                              "type": "string",
+                            },
+                            "params": {
+                              "additionalProperties": {
+                                "type": [
+                                  "number",
+                                  "string",
+                                ],
+                              },
+                              "propertyNames": {
+                                "type": "string",
+                              },
+                              "type": "object",
+                            },
+                            "version": {
+                              "exclusiveMinimum": 0,
+                              "maximum": 9007199254740991,
+                              "type": "integer",
+                            },
+                          },
+                          "required": [
+                            "version",
+                            "code",
+                            "params",
+                          ],
+                          "type": "object",
+                        },
+                        "type": "array",
+                      },
+                      "decisionsCles": {
+                        "items": {
+                          "format": "uuid",
+                          "pattern": "^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-4[0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12})$",
+                          "type": "string",
+                        },
+                        "type": "array",
+                      },
+                      "fin": {
+                        "enum": [
+                          "A",
+                          "B",
+                          "C",
+                          "D",
+                        ],
+                        "type": "string",
+                      },
+                      "missionRef": {
+                        "format": "uuid",
+                        "pattern": "^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-4[0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12})$",
+                        "type": "string",
+                      },
+                      "mode": {
+                        "const": "solo",
+                        "type": "string",
+                      },
+                      "recommandations": {
+                        "items": {
+                          "additionalProperties": false,
+                          "properties": {
+                            "piste": {
+                              "additionalProperties": false,
+                              "properties": {
+                                "code": {
+                                  "minLength": 1,
+                                  "type": "string",
+                                },
+                                "params": {
+                                  "additionalProperties": {
+                                    "type": [
+                                      "number",
+                                      "string",
+                                    ],
+                                  },
+                                  "propertyNames": {
+                                    "type": "string",
+                                  },
+                                  "type": "object",
+                                },
+                                "version": {
+                                  "exclusiveMinimum": 0,
+                                  "maximum": 9007199254740991,
+                                  "type": "integer",
+                                },
+                              },
+                              "required": [
+                                "version",
+                                "code",
+                                "params",
+                              ],
+                              "type": "object",
+                            },
+                            "pourquoi": {
+                              "additionalProperties": false,
+                              "properties": {
+                                "code": {
+                                  "minLength": 1,
+                                  "type": "string",
+                                },
+                                "params": {
+                                  "additionalProperties": {
+                                    "type": [
+                                      "number",
+                                      "string",
+                                    ],
+                                  },
+                                  "propertyNames": {
+                                    "type": "string",
+                                  },
+                                  "type": "object",
+                                },
+                                "version": {
+                                  "exclusiveMinimum": 0,
+                                  "maximum": 9007199254740991,
+                                  "type": "integer",
+                                },
+                              },
+                              "required": [
+                                "version",
+                                "code",
+                                "params",
+                              ],
+                              "type": "object",
+                            },
+                          },
+                          "required": [
+                            "pourquoi",
+                            "piste",
+                          ],
+                          "type": "object",
+                        },
+                        "type": "array",
+                      },
+                      "scoreTotal": {
+                        "maximum": 1000,
+                        "minimum": 0,
+                        "type": "number",
+                      },
+                      "scores": {
+                        "additionalProperties": false,
+                        "properties": {
+                          "collab": {
+                            "const": 0,
+                            "type": "number",
+                          },
+                          "fiabilite": {
+                            "maximum": 166.66666666666666,
+                            "minimum": 0,
+                            "type": "number",
+                          },
+                          "ressources": {
+                            "maximum": 222.22222222222223,
+                            "minimum": 0,
+                            "type": "number",
+                          },
+                          "science": {
+                            "maximum": 333.3333333333333,
+                            "minimum": 0,
+                            "type": "number",
+                          },
+                          "technique": {
+                            "maximum": 277.77777777777777,
+                            "minimum": 0,
+                            "type": "number",
+                          },
+                        },
+                        "required": [
+                          "science",
+                          "technique",
+                          "ressources",
+                          "fiabilite",
+                          "collab",
+                        ],
+                        "type": "object",
+                      },
+                      "version": {
+                        "const": 2,
+                        "type": "number",
+                      },
+                    },
+                    "required": [
+                      "version",
+                      "missionRef",
+                      "scoreTotal",
+                      "fin",
+                      "causes",
+                      "decisionsCles",
+                      "mode",
+                      "scores",
+                      "recommandations",
+                    ],
+                    "type": "object",
+                  },
+                  {
+                    "additionalProperties": false,
+                    "properties": {
+                      "causes": {
+                        "items": {
+                          "additionalProperties": false,
+                          "properties": {
+                            "code": {
+                              "minLength": 1,
+                              "type": "string",
+                            },
+                            "params": {
+                              "additionalProperties": {
+                                "type": [
+                                  "number",
+                                  "string",
+                                ],
+                              },
+                              "propertyNames": {
+                                "type": "string",
+                              },
+                              "type": "object",
+                            },
+                            "version": {
+                              "exclusiveMinimum": 0,
+                              "maximum": 9007199254740991,
+                              "type": "integer",
+                            },
+                          },
+                          "required": [
+                            "version",
+                            "code",
+                            "params",
+                          ],
+                          "type": "object",
+                        },
+                        "type": "array",
+                      },
+                      "decisionsCles": {
+                        "items": {
+                          "format": "uuid",
+                          "pattern": "^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-4[0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12})$",
+                          "type": "string",
+                        },
+                        "type": "array",
+                      },
+                      "fin": {
+                        "enum": [
+                          "A",
+                          "B",
+                          "C",
+                          "D",
+                        ],
+                        "type": "string",
+                      },
+                      "missionRef": {
+                        "format": "uuid",
+                        "pattern": "^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-4[0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12})$",
+                        "type": "string",
+                      },
+                      "mode": {
+                        "const": "equipe",
+                        "type": "string",
+                      },
+                      "recommandations": {
+                        "items": {
+                          "additionalProperties": false,
+                          "properties": {
+                            "piste": {
+                              "additionalProperties": false,
+                              "properties": {
+                                "code": {
+                                  "minLength": 1,
+                                  "type": "string",
+                                },
+                                "params": {
+                                  "additionalProperties": {
+                                    "type": [
+                                      "number",
+                                      "string",
+                                    ],
+                                  },
+                                  "propertyNames": {
+                                    "type": "string",
+                                  },
+                                  "type": "object",
+                                },
+                                "version": {
+                                  "exclusiveMinimum": 0,
+                                  "maximum": 9007199254740991,
+                                  "type": "integer",
+                                },
+                              },
+                              "required": [
+                                "version",
+                                "code",
+                                "params",
+                              ],
+                              "type": "object",
+                            },
+                            "pourquoi": {
+                              "additionalProperties": false,
+                              "properties": {
+                                "code": {
+                                  "minLength": 1,
+                                  "type": "string",
+                                },
+                                "params": {
+                                  "additionalProperties": {
+                                    "type": [
+                                      "number",
+                                      "string",
+                                    ],
+                                  },
+                                  "propertyNames": {
+                                    "type": "string",
+                                  },
+                                  "type": "object",
+                                },
+                                "version": {
+                                  "exclusiveMinimum": 0,
+                                  "maximum": 9007199254740991,
+                                  "type": "integer",
+                                },
+                              },
+                              "required": [
+                                "version",
+                                "code",
+                                "params",
+                              ],
+                              "type": "object",
+                            },
+                          },
+                          "required": [
+                            "pourquoi",
+                            "piste",
+                          ],
+                          "type": "object",
+                        },
+                        "type": "array",
+                      },
+                      "scoreTotal": {
+                        "maximum": 1000,
+                        "minimum": 0,
+                        "type": "number",
+                      },
+                      "scores": {
+                        "additionalProperties": false,
+                        "properties": {
+                          "collab": {
+                            "maximum": 100,
+                            "minimum": 0,
+                            "type": "number",
+                          },
+                          "fiabilite": {
+                            "maximum": 150,
+                            "minimum": 0,
+                            "type": "number",
+                          },
+                          "ressources": {
+                            "maximum": 200,
+                            "minimum": 0,
+                            "type": "number",
+                          },
+                          "science": {
+                            "maximum": 300,
+                            "minimum": 0,
+                            "type": "number",
+                          },
+                          "technique": {
+                            "maximum": 250,
+                            "minimum": 0,
+                            "type": "number",
+                          },
+                        },
+                        "required": [
+                          "science",
+                          "technique",
+                          "ressources",
+                          "fiabilite",
+                          "collab",
+                        ],
+                        "type": "object",
+                      },
+                      "version": {
+                        "const": 2,
+                        "type": "number",
+                      },
+                    },
+                    "required": [
+                      "version",
+                      "missionRef",
+                      "scoreTotal",
+                      "fin",
+                      "causes",
+                      "decisionsCles",
+                      "mode",
+                      "scores",
+                      "recommandations",
+                    ],
+                    "type": "object",
+                  },
+                ],
+              },
+            ],
+          },
+          "missionId": {
+            "format": "uuid",
+            "pattern": "^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-4[0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12})$",
+            "type": "string",
+          },
+          "type": {
+            "const": "BilanPublié",
+            "type": "string",
+          },
+          "version": {
+            "exclusiveMinimum": 0,
+            "maximum": 9007199254740991,
+            "type": "integer",
+          },
+        },
+        "required": [
+          "type",
+          "version",
+          "missionId",
+          "bilan",
+        ],
+        "type": "object",
+      },
+      {
+        "additionalProperties": false,
+        "properties": {
+          "scenarioId": {
+            "format": "uuid",
+            "pattern": "^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-4[0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12})$",
+            "type": "string",
+          },
+          "type": {
+            "const": "ScénarioDébloqué",
+            "type": "string",
+          },
+          "utilisateurId": {
+            "format": "uuid",
+            "pattern": "^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-4[0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12})$",
+            "type": "string",
+          },
+          "version": {
+            "exclusiveMinimum": 0,
+            "maximum": 9007199254740991,
+            "type": "integer",
+          },
+        },
+        "required": [
+          "type",
+          "version",
+          "scenarioId",
+          "utilisateurId",
+        ],
+        "type": "object",
+      },
+    ],
+  },
+}
+`;

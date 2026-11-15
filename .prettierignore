@@ -1,0 +1,11 @@
+node_modules/
+dist/
+pnpm-lock.yaml
+coverage/
+**/data/**
+.opencode/
+# Documents sources du projet — jamais reformattés
+Agent.md
+Cahier d’analyse THE LAST LIGHT.md
+Cahier_de_conception_Space_Mission_Design_Game_v1.2.md
+PLAN_PHASES_THE_LAST_LIGHT.md

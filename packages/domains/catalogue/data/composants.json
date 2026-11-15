@@ -1,0 +1,207 @@
+{
+  "composants": [
+    {
+      "id": "c0de0001-0000-4000-8000-000000000000",
+      "source": "a-calibrer",
+      "categorie": "structure",
+      "nom": "structure-principale",
+      "niveau": "decouverte",
+      "gameplay": {
+        "masseKg": 80,
+        "powerW": 0,
+        "dutyCycle": 1,
+        "costMUSD": 5,
+        "fiabilite": 0.99
+      }
+    },
+    {
+      "id": "c0de0002-0000-4000-8000-000000000000",
+      "source": "a-calibrer",
+      "categorie": "structure",
+      "nom": "structure-monocoque-legere",
+      "niveau": "ingenieur",
+      "gameplay": {
+        "masseKg": 55,
+        "powerW": 0,
+        "dutyCycle": 1,
+        "costMUSD": 7,
+        "fiabilite": 0.98
+      }
+    },
+    {
+      "id": "c0de0003-0000-4000-8000-000000000000",
+      "source": "a-calibrer",
+      "categorie": "energie-panneau",
+      "nom": "panneau-solaire-principal",
+      "niveau": "decouverte",
+      "gameplay": {
+        "masseKg": 12,
+        "powerW": 110,
+        "dutyCycle": 1,
+        "degradationAn": 0.02,
+        "costMUSD": 6,
+        "fiabilite": 0.97
+      }
+    },
+    {
+      "id": "c0de0004-0000-4000-8000-000000000000",
+      "source": "a-calibrer",
+      "categorie": "energie-panneau",
+      "nom": "panneau-solaire-haute-performance",
+      "niveau": "expert",
+      "gameplay": {
+        "masseKg": 15,
+        "powerW": 160,
+        "dutyCycle": 1,
+        "degradationAn": 0.01,
+        "costMUSD": 11,
+        "fiabilite": 0.95
+      }
+    },
+    {
+      "id": "c0de0005-0000-4000-8000-000000000000",
+      "source": "a-calibrer",
+      "categorie": "energie-batterie",
+      "nom": "batterie-principale-lithium-ion",
+      "niveau": "decouverte",
+      "gameplay": {
+        "masseKg": 9,
+        "powerW": 40,
+        "dutyCycle": 1,
+        "capaciteBatterieWh": 250,
+        "costMUSD": 4,
+        "fiabilite": 0.96
+      }
+    },
+    {
+      "id": "c0de0006-0000-4000-8000-000000000000",
+      "source": "a-calibrer",
+      "categorie": "energie-batterie",
+      "nom": "batterie-longue-duree",
+      "niveau": "ingenieur",
+      "gameplay": {
+        "masseKg": 14,
+        "powerW": 60,
+        "dutyCycle": 1,
+        "capaciteBatterieWh": 400,
+        "costMUSD": 7,
+        "fiabilite": 0.97
+      }
+    },
+    {
+      "id": "c0de0007-0000-4000-8000-000000000000",
+      "source": "a-calibrer",
+      "categorie": "communications",
+      "nom": "emetteur-bande-x",
+      "niveau": "decouverte",
+      "gameplay": {
+        "masseKg": 4,
+        "powerW": 40,
+        "dutyCycle": 1,
+        "costMUSD": 6,
+        "fiabilite": 0.94
+      }
+    },
+    {
+      "id": "c0de0008-0000-4000-8000-000000000000",
+      "source": "a-calibrer",
+      "categorie": "communications",
+      "nom": "antenne-haut-gain",
+      "niveau": "ingenieur",
+      "gameplay": {
+        "masseKg": 6,
+        "powerW": 15,
+        "dutyCycle": 1,
+        "costMUSD": 9,
+        "fiabilite": 0.96
+      }
+    },
+    {
+      "id": "c0de0009-0000-4000-8000-000000000000",
+      "source": "a-calibrer",
+      "categorie": "ordinateur",
+      "nom": "ordinateur-de-bord",
+      "niveau": "decouverte",
+      "gameplay": {
+        "masseKg": 5,
+        "powerW": 15,
+        "dutyCycle": 1,
+        "costMUSD": 8,
+        "fiabilite": 0.95
+      }
+    },
+    {
+      "id": "c0de000a-0000-4000-8000-000000000000",
+      "source": "a-calibrer",
+      "categorie": "ordinateur",
+      "nom": "ordinateur-de-bord-redondant",
+      "niveau": "expert",
+      "gameplay": {
+        "masseKg": 7,
+        "powerW": 25,
+        "dutyCycle": 1,
+        "costMUSD": 13,
+        "fiabilite": 0.98
+      }
+    },
+    {
+      "id": "c0de000b-0000-4000-8000-000000000000",
+      "source": "a-calibrer",
+      "categorie": "attitude",
+      "nom": "roues-a-reaction",
+      "niveau": "decouverte",
+      "gameplay": {
+        "masseKg": 1.5,
+        "powerW": 10,
+        "dutyCycle": 1,
+        "costMUSD": 3,
+        "fiabilite": 0.93
+      }
+    },
+    {
+      "id": "c0de000c-0000-4000-8000-000000000000",
+      "source": "a-calibrer",
+      "categorie": "attitude",
+      "nom": "propulseurs-controle-attitude",
+      "niveau": "ingenieur",
+      "gameplay": {
+        "masseKg": 2.5,
+        "powerW": 8,
+        "dutyCycle": 1,
+        "costMUSD": 5,
+        "fiabilite": 0.95
+      },
+      "note": "Remplace les magnétocoupleurs : la Lune n'a pas de champ magnétique global, ils seraient inutiles en orbite lunaire."
+    },
+    {
+      "id": "c0de000d-0000-4000-8000-000000000000",
+      "source": "a-calibrer",
+      "categorie": "propulsion",
+      "nom": "moteur-principal-bi-propulseur",
+      "niveau": "decouverte",
+      "gameplay": {
+        "masseKg": 12,
+        "powerW": 0,
+        "dutyCycle": 1,
+        "ispS": 220,
+        "costMUSD": 12,
+        "fiabilite": 0.94
+      }
+    },
+    {
+      "id": "c0de000e-0000-4000-8000-000000000000",
+      "source": "a-calibrer",
+      "categorie": "propulsion",
+      "nom": "moteur-haute-impulsion",
+      "niveau": "expert",
+      "gameplay": {
+        "masseKg": 10,
+        "powerW": 0,
+        "dutyCycle": 1,
+        "ispS": 300,
+        "costMUSD": 16,
+        "fiabilite": 0.96
+      }
+    }
+  ]
+}

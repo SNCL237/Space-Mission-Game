@@ -1,0 +1,332 @@
+{
+  "version": "1.0.0",
+  "id": "5ce40002-0000-4000-8000-000000000000",
+  "ordre": 2,
+  "cible": "terre",
+  "budgetMaxMUSD": 55,
+  "catalogueAutorise": ["ca7a0001-0000-4000-8000-000000000000"],
+  "objectifs": [
+    {
+      "id": "0b7e0004-0000-4000-8000-000000000000",
+      "titre": "Continuité du record d'observation terrestre",
+      "questionScientifique": "Une orbiteur à budget réduit peut-elle prolonger sans rupture le continuum de mesures multi-spectrales de la surface ?",
+      "role": "principal"
+    },
+    {
+      "id": "0b7e0005-0000-4000-8000-000000000000",
+      "titre": "Qualité de l'eau et dynamiques côtières",
+      "questionScientifique": "Les turbides, algues et sédiments côtiers se suivent-ils à l'échelle d'une saison avec une résolution de 30 m ?",
+      "role": "secondaire"
+    },
+    {
+      "id": "0b7e0006-0000-4000-8000-000000000000",
+      "titre": "Continuité thermique de nuit polaire",
+      "questionScientifique": "Le signal thermique de nuit polaire reste-t-il exploitable sans instrument dédié de refroidissement ?",
+      "role": "secondaire"
+    }
+  ],
+  "actes": [
+    {
+      "id": "ac7e0008-0000-4000-8000-000000000000",
+      "numero": 0,
+      "titre": { "fr": "Après la Lune, la Terre", "en": "After the Moon, Earth" },
+      "type": "briefing",
+      "description": {
+        "fr": "La campagne lunaire close, l'équipe reprend les archives Landsat et le cahier des charges d'une mission terrestre à budget serré.",
+        "en": "With the lunar campaign closed, the team picks up the Landsat archives and the spec sheet of a tight-budget Earth mission."
+      }
+    },
+    {
+      "id": "ac7e0009-0000-4000-8000-000000000000",
+      "numero": 1,
+      "titre": { "fr": "Le Record à Prolonger", "en": "The Record to Extend" },
+      "type": "espace-de-mission",
+      "description": {
+        "fr": "Les objectifs scientifiques sont fixés : prolonger le continuum d'observation sans rompre la chaîne des mesures.",
+        "en": "The science objectives are set: extend the observation continuum without breaking the chain of measurements."
+      }
+    },
+    {
+      "id": "ac7e0010-0000-4000-8000-000000000000",
+      "numero": 2,
+      "titre": { "fr": "Chaque Décimètre Compte", "en": "Every Decimeter Counts" },
+      "type": "atelier-spatial",
+      "description": {
+        "fr": "Sous 55 millions de dollars, masse et puissance se disputent l'orbite héliosynchrone et les bandes spectrales.",
+        "en": "Under 55 million dollars, mass and power fight over the sun-synchronous orbit and the spectral bands."
+      }
+    },
+    {
+      "id": "ac7e0011-0000-4000-8000-000000000000",
+      "numero": 3,
+      "titre": { "fr": "Le Passage Nominal", "en": "The Nominal Pass" },
+      "type": "planification",
+      "description": {
+        "fr": "Calage temporel, fenêtres de downlink, plans de couverture : la mission s'engage sur son passage récurrent.",
+        "en": "Timing, downlink windows, coverage plans: the mission commits to its recurring pass."
+      }
+    },
+    {
+      "id": "ac7e0012-0000-4000-8000-000000000000",
+      "numero": 4,
+      "titre": { "fr": "Première Lumière sur la Terre", "en": "First Light on Earth" },
+      "type": "controle-de-mission",
+      "description": {
+        "fr": "Ouverture des miroirs, étalonnage, premières scènes : l'instrument répond, mais la dérive commence en silence.",
+        "en": "Mirrors open, calibration, first scenes: the instrument answers, but the drift begins in silence."
+      }
+    },
+    {
+      "id": "ac7e0013-0000-4000-8000-000000000000",
+      "numero": 5,
+      "titre": { "fr": "La Fenêtre se Ferme", "en": "The Window Closes" },
+      "type": "crise",
+      "description": {
+        "fr": "Conjonction orbitale et panne de station sol : arbitrer les scènes à sauver avant que la fenêtre de contact ne se ferme.",
+        "en": "Orbital conjunction and ground station outage: arbitrate which scenes to save before the contact window closes."
+      }
+    },
+    {
+      "id": "ac7e0014-0000-4000-8000-000000000000",
+      "numero": 6,
+      "titre": { "fr": "Ce que la Terre Retient", "en": "What Earth Keeps" },
+      "type": "rapport-final",
+      "description": {
+        "fr": "Bilan, scènes archivées, leçons de calage : le record se prolonge, et la campagne suivante se prépare.",
+        "en": "Outcome, archived scenes, calibration lessons: the record extends, and the next campaign takes shape."
+      }
+    }
+  ],
+  "definitionsEvenements": [
+    {
+      "id": "de410007-0000-4000-8000-000000000000",
+      "type": "derive-etalonnage",
+      "origine": "vieillissement des cibles de calibration interne",
+      "probabilite": 0.08,
+      "impact": "donnees",
+      "ampleur": 1,
+      "indice": "Les bandes courtes dérivent de plus de 2 % entre deux calibrations solaires consécutives."
+    },
+    {
+      "id": "de410008-0000-4000-8000-000000000000",
+      "type": "conjonction-orbitale",
+      "origine": "débris en orbite basse non catalogué",
+      "probabilite": 0.06,
+      "impact": "dureeVie",
+      "ampleur": 1,
+      "indice": "La fenêtre de manœuvre se déclenche à moins de 48 h d'une approche nominale non résolue."
+    },
+    {
+      "id": "de410009-0000-4000-8000-000000000000",
+      "type": "panne-station-sol",
+      "origine": "tempête sur le site de la station",
+      "probabilite": 0.07,
+      "impact": "instrument",
+      "cibleId": "1a570001-0000-4000-8000-000000000000",
+      "indice": "Le débit utile descend à zéro pendant un passage complet alors que le lien radio est nominal."
+    },
+    {
+      "id": "de410010-0000-4000-8000-000000000000",
+      "type": "surchauffe-miroir",
+      "origine": "cycle d'acquisition prolongé sans ombre",
+      "probabilite": 0.09,
+      "impact": "instrument",
+      "cibleId": "1a570001-0000-4000-8000-000000000000",
+      "indice": "La température du miroir primaire sort de sa plage d'étalonnage entre deux scènes consécutives."
+    },
+    {
+      "id": "de410011-0000-4000-8000-000000000000",
+      "type": "debit-memoire-saturée",
+      "origine": "couverture nuageuse obligeant des rejeux",
+      "probabilite": 0.05,
+      "impact": "objectif",
+      "cibleId": "0b7e0004-0000-4000-8000-000000000000",
+      "critique": true,
+      "indice": "La mémoire de bord reste au-dessus de 90 % pendant trois passages, les rejeux s'empilent."
+    },
+    {
+      "id": "de410012-0000-4000-8000-000000000000",
+      "type": "scintillation-atmospherique",
+      "origine": "couverture nuageuse fine non détectée",
+      "probabilite": 0.1,
+      "impact": "donnees",
+      "ampleur": 1,
+      "indice": "Le rapport signal sur bruit chute sur une bande entière sans variation de la cible au sol."
+    }
+  ],
+  "evenementsNarratifs": [
+    {
+      "id": "e7e20005-0000-4000-8000-000000000000",
+      "declencheur": "acte-1-objectifs-fixes",
+      "texte": {
+        "fr": "Le continuum Landsat dépasse cinquante ans de mesures continues. Prolonger cette chaîne, c'est accepter d'être tenu à la même exigence que les géants d'avant.",
+        "en": "The Landsat record spans more than fifty years of continuous measurement. Extending that chain means accepting the same standard as the giants before it."
+      },
+      "consequence": "objectif"
+    },
+    {
+      "id": "e7e20006-0000-4000-8000-000000000000",
+      "declencheur": "acte-3-prise-de-poste",
+      "texte": {
+        "fr": "Chaque passage de 99 minutes redessine la carte. À la vitesse d'orbite, une décision d'étalonnage prise trop tard se paie sur la scène suivante.",
+        "en": "Every 99-minute pass redraws the map. At orbital speed, a calibration decision taken too late is paid on the next scene."
+      },
+      "consequence": "dureeVie"
+    },
+    {
+      "id": "e7e20007-0000-4000-8000-000000000000",
+      "declencheur": "acte-4-premiere-lumiere",
+      "texte": {
+        "fr": "La première lumière arrive nette sur l'écran. Puis les bandes courtes s'écartent, d'abord d'un cheveu, puis assez pour compter.",
+        "en": "First light arrives crisp on screen. Then the short bands drift apart, first by a hair, then enough to count."
+      },
+      "consequence": "donnees"
+    },
+    {
+      "id": "e7e20008-0000-4000-8000-000000000000",
+      "declencheur": "acte-5-fenetre-de-contact",
+      "texte": {
+        "fr": "La station se tait et le compte à rebours tourne. Chaque scène non relevée est une question que la Terre ne posera plus jamais.",
+        "en": "The ground station falls silent and the countdown runs. Every scene not retrieved is a question Earth will never ask again."
+      },
+      "consequence": "instrument"
+    }
+  ],
+  "fins": [
+    {
+      "code": "A",
+      "titre": { "fr": "Le Record Prolongé", "en": "The Record Extended" },
+      "regles": [
+        { "type": "scienceMinimale", "seuil": 0.8 },
+        { "type": "budgetRespecte", "seuil": 1 },
+        { "type": "objectifsAtteints", "minimum": 3 }
+      ],
+      "conclusion": {
+        "fr": "Le continuum d'observation se prolonge sans rupture : les scènes tiennent la promesse du budget et de la chaîne multi-spectrale.",
+        "en": "The observation continuum extends without a break: the scenes keep the promise of the budget and the multi-spectral chain."
+      }
+    },
+    {
+      "code": "B",
+      "titre": { "fr": "Une Campagne Solide", "en": "A Solid Campaign" },
+      "regles": [
+        { "type": "scienceMinimale", "seuil": 0.6 },
+        { "type": "budgetRespecte", "seuil": 1 }
+      ],
+      "conclusion": {
+        "fr": "Le bilan tient : le record avance, le budget reste dans ses marges, et quelques questions attendent la prochaine fenêtre.",
+        "en": "The outcome holds: the record moves forward, the budget stays in margin, and a few questions wait for the next window."
+      }
+    },
+    {
+      "code": "C",
+      "titre": { "fr": "La Fenêtre Écourtée", "en": "The Shortened Window" },
+      "regles": [
+        { "type": "scienceMinimale", "seuil": 0.35 },
+        { "type": "dureeVieSuffisante", "seuil": 0.5 }
+      ],
+      "conclusion": {
+        "fr": "La mission s'arrête avant l'échéance : les scènes sauvées restent cohérentes, mais la chaîne se termine plus tôt que prévu.",
+        "en": "The mission ends before its deadline: the saved scenes remain coherent, but the chain ends earlier than planned."
+      }
+    },
+    {
+      "code": "D",
+      "titre": { "fr": "L'Échec Utile", "en": "The Useful Failure" },
+      "regles": [{ "type": "missionPerdue", "seuil": 1 }],
+      "conclusion": {
+        "fr": "Comme une sonde qu'on écrase volontairement faute de carburant, le dossier de la mission devient une leçon documentée pour la suivante.",
+        "en": "Like a probe deliberately crashed for lack of propellant, the mission dossier becomes a documented lesson for the next one."
+      }
+    }
+  ],
+  "conditionsDeblocage": [
+    {
+      "id": "c04d0004-0000-4000-8000-000000000000",
+      "type": "prerequis",
+      "scenarioPrerequis": "5ce40001-0000-4000-8000-000000000000"
+    }
+  ],
+  "personnages": [
+    {
+      "id": "504e0005-0000-4000-8000-000000000000",
+      "fiction": true,
+      "nom": { "fr": "Inès Fabre", "en": "Ines Fabre" },
+      "role": { "fr": "Responsable de la campagne terrestre", "en": "Lead of the Earth campaign" },
+      "motivation": {
+        "fr": "Tenir la chaîne des mesures sans qu'un seul jour de couverture ne manque à l'appel.",
+        "en": "Keep the measurement chain intact without a single day of coverage missing."
+      }
+    },
+    {
+      "id": "504e0006-0000-4000-8000-000000000000",
+      "fiction": true,
+      "nom": { "fr": "Tomás Ribeiro", "en": "Tomas Ribeiro" },
+      "role": { "fr": "Ingénieur d'étalonnage", "en": "Calibration engineer" },
+      "motivation": {
+        "fr": "Soigner chaque dérive d'instrument comme on soigne une signature : elle reste lisible ou elle disparaît.",
+        "en": "Treat every instrument drift like a signature: it stays readable, or it disappears."
+      }
+    },
+    {
+      "id": "504e0007-0000-4000-8000-000000000000",
+      "fiction": true,
+      "nom": { "fr": "Grace Adeyemi", "en": "Grace Adeyemi" },
+      "role": { "fr": "Planificatrice de couverture", "en": "Coverage planner" },
+      "motivation": {
+        "fr": "Que chaque passage compte double : une scène sauvée est une question que la Terre continue de poser.",
+        "en": "Make every pass count twice: a saved scene is a question Earth keeps asking."
+      }
+    }
+  ],
+  "archives": [
+    {
+      "id": "a2c40005-0000-4000-8000-000000000000",
+      "titre": { "fr": "Le lancement de Landsat 9", "en": "The launch of Landsat 9" },
+      "contenu": {
+        "fr": "Le 27 septembre 2021, Landsat 9 est lancé par une fusée Atlas V depuis la Vandenberg Space Force Base, placé sur une orbite polaire basse héliosynchrone à 705 km, avec une période de révolution de 99 minutes.",
+        "en": "On September 27, 2021, Landsat 9 launches on an Atlas V rocket from Vandenberg Space Force Base, placed into a 705 km near-polar sun-synchronous orbit with a 99-minute period."
+      },
+      "conditionAcces": "acte-1",
+      "realFact": true,
+      "fiction": false,
+      "source": "NASA — Landsat 9 mission page",
+      "urlSource": "https://science.nasa.gov/mission/landsat-9/"
+    },
+    {
+      "id": "a2c40006-0000-4000-8000-000000000000",
+      "titre": { "fr": "Le record de plus de cinquante ans", "en": "The record of more than fifty years" },
+      "contenu": {
+        "fr": "Landsat 9 prolonge le plus long relevé d'observation terrestre : 11 bandes spectrales, 30 m de résolution, plus de 700 scènes par jour, une revisite tous les 8 jours avec Landsat 8 — des données gratuites estimées à 25,6 milliards de dollars contribués à l'économie américaine en 2023.",
+        "en": "Landsat 9 extends the longest Earth observation record: 11 spectral bands, 30 m resolution, more than 700 scenes per day, an 8-day revisit with Landsat 8 — free data estimated to have contributed $25.6 billion to the U.S. economy in 2023."
+      },
+      "conditionAcces": "acte-0",
+      "realFact": true,
+      "fiction": false,
+      "source": "NASA — Landsat 9 mission page",
+      "urlSource": "https://science.nasa.gov/mission/landsat-9/"
+    },
+    {
+      "id": "a2c40007-0000-4000-8000-000000000000",
+      "titre": { "fr": "Journal de couverture de TERRA-NOVA", "en": "TERRA-NOVA coverage log" },
+      "contenu": {
+        "fr": "Archive fictive : le journal de bord de TERRA-NOVA, tenu par l'équipe de couverture scène par scène après la perte de la fenêtre de contact. Il sert de briefing à la campagne terrestre.",
+        "en": "Fictional archive: the TERRA-NOVA logbook, kept by the coverage team scene by scene after the contact window was lost. It briefs the Earth campaign."
+      },
+      "conditionAcces": "acte-0",
+      "realFact": false,
+      "fiction": true
+    },
+    {
+      "id": "a2c40008-0000-4000-8000-000000000000",
+      "titre": { "fr": "Mémo d'étalonnage de Tomás Ribeiro", "en": "Tomás Ribeiro's calibration memo" },
+      "contenu": {
+        "fr": "Archive fictive : la note interne décrivant les trois dérives acceptées de l'instrument, et le seuil auquel la campagne doit être déclarée incomplète.",
+        "en": "Fictional archive: the internal note describing the three accepted instrument drifts, and the threshold at which the campaign must be declared incomplete."
+      },
+      "conditionAcces": "acte-2",
+      "realFact": false,
+      "fiction": true
+    }
+  ]
+}

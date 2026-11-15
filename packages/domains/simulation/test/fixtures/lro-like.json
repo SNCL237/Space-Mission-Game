@@ -1,0 +1,30 @@
+{
+  "source": "a-calibrer",
+  "dureeCibleJours": 6,
+  "batterieInitialeWh": 400,
+  "capaciteStockageGbit": 1000,
+  "debitLiaisonMbps": 100,
+  "tempsContactSParJour": 21600,
+  "tempsObservationSParJour": 21600,
+  "reserveDeltaVms": 1000,
+  "ispS": 300,
+  "seuilBatterieDegrade": 0.5,
+  "seuilBatterieCritique": 0.2,
+  "mtbfJoursParSysteme": {
+    "00000001-1111-4111-8111-111111111111": 1000000000,
+    "00000002-1111-4111-8111-111111111111": 1000000000,
+    "00000003-1111-4111-8111-111111111111": 1000000000
+  },
+  "limitesVieJours": {
+    "degradationPanneaux": 6,
+    "autonomieCarburant": 6,
+    "toleranceRadiation": 6
+  },
+  "crise": {
+    "delaiDecisionJours": 2,
+    "facteurTransmission": 0.5,
+    "dureeSuspensionObservationsJours": 1,
+    "facteurBasseConsommation": 0.5,
+    "penaliteRisqueAccru": 0.1
+  }
+}

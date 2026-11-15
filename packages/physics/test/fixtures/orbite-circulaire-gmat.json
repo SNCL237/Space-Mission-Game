@@ -1,0 +1,19 @@
+{
+  "outil": "GMAT R2026a (Console)",
+  "modele": "Luna point mass, propagation PrinceDormand78",
+  "etatInitial": {
+    "demiGrandAxeKm": 1837.1,
+    "excentricite": 0,
+    "inclinaisonDeg": 90,
+    "ascensionDroiteNoeudDeg": 0,
+    "argumentPeriastreDeg": 0,
+    "anomalieVraieDeg": 0
+  },
+  "tempsS": 7065.628104074858,
+  "positionKm": {
+    "xKm": 1837.099992867499,
+    "yKm": 4.17774356775702e-11,
+    "zKm": -0.161883753581321
+  },
+  "toleranceKm": 1
+}

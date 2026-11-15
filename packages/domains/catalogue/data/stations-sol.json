@@ -1,0 +1,34 @@
+{
+  "stationsSol": [
+    {
+      "id": "57a70001-0000-4000-8000-000000000000",
+      "source": "a-calibrer",
+      "nom": "white-sands",
+      "gameplay": { "dataMbps": 100 },
+      "reference": {
+        "source": "NASA NTRS (réseau SCaN/NSN)",
+        "urlSource": "https://ntrs.nasa.gov/citations/20240012036"
+      }
+    },
+    {
+      "id": "57a70002-0000-4000-8000-000000000000",
+      "source": "a-calibrer",
+      "nom": "matjiesfontein",
+      "gameplay": { "dataMbps": 80 },
+      "reference": {
+        "source": "NASA NTRS (réseau SCaN/NSN)",
+        "urlSource": "https://ntrs.nasa.gov/citations/20240012036"
+      }
+    },
+    {
+      "id": "57a70003-0000-4000-8000-000000000000",
+      "source": "a-calibrer",
+      "nom": "alice-springs",
+      "gameplay": { "dataMbps": 90 },
+      "reference": {
+        "source": "NASA NTRS (réseau SCaN/NSN)",
+        "urlSource": "https://ntrs.nasa.gov/citations/20240012036"
+      }
+    }
+  ]
+}

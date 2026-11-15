@@ -1,0 +1,37 @@
+{
+  "lanceurs": [
+    {
+      "id": "1a4c0001-0000-4000-8000-000000000000",
+      "source": "a-calibrer",
+      "nom": "lanceur-leger",
+      "classe": "leger",
+      "gameplay": {
+        "capaciteKg": { "polaire": 180, "circulaireBasse": 200 },
+        "costMUSD": 15,
+        "fiabilite": 0.93
+      }
+    },
+    {
+      "id": "1a4c0002-0000-4000-8000-000000000000",
+      "source": "a-calibrer",
+      "nom": "lanceur-moyen",
+      "classe": "moyen",
+      "gameplay": {
+        "capaciteKg": { "polaire": 420, "circulaireBasse": 450, "elliptique": 400 },
+        "costMUSD": 30,
+        "fiabilite": 0.95
+      }
+    },
+    {
+      "id": "1a4c0003-0000-4000-8000-000000000000",
+      "source": "a-calibrer",
+      "nom": "lanceur-lourd",
+      "classe": "lourd",
+      "gameplay": {
+        "capaciteKg": { "polaire": 800, "circulaireBasse": 850, "elliptique": 750 },
+        "costMUSD": 60,
+        "fiabilite": 0.97
+      }
+    }
+  ]
+}

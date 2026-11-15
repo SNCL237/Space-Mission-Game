@@ -1,0 +1,439 @@
+{
+  "version": "1.0.0",
+  "id": "5ce40001-0000-4000-8000-000000000000",
+  "ordre": 1,
+  "cible": "lune",
+  "budgetMaxMUSD": 100,
+  "catalogueAutorise": [
+    "ca7a0001-0000-4000-8000-000000000000"
+  ],
+  "objectifs": [
+    {
+      "id": "0b7e0001-0000-4000-8000-000000000000",
+      "titre": "Recherche de glace d'eau aux pôles",
+      "questionScientifique": "L'hydrogène mesuré par les spectromètres à neutrons est-il de la glace d'eau piégée dans les cratères en ombre permanente ?",
+      "role": "principal"
+    },
+    {
+      "id": "0b7e0002-0000-4000-8000-000000000000",
+      "titre": "Cartographie polaire",
+      "questionScientifique": "À quoi ressemble précisément la région polaire étudiée, y compris ses zones en ombre permanente ?",
+      "role": "secondaire"
+    },
+    {
+      "id": "0b7e0003-0000-4000-8000-000000000000",
+      "titre": "Analyse thermique",
+      "questionScientifique": "Comment les températures varient-elles dans les zones ciblées entre deux journées lunaires ?",
+      "role": "secondaire"
+    },
+    {
+      "id": "0b7e0004-0000-4000-8000-000000000000",
+      "titre": "Composition de surface",
+      "questionScientifique": "Quelles propriétés de surface peuvent être caractérisées autour des sites polaires ?",
+      "role": "secondaire"
+    }
+  ],
+  "actes": [
+    {
+      "id": "ac7e0001-0000-4000-8000-000000000000",
+      "numero": 0,
+      "titre": {
+        "fr": "La Dernière Transmission",
+        "en": "The Last Transmission"
+      },
+      "type": "briefing",
+      "description": {
+        "fr": "LUNAR-01 s'est tue. L'équipe présente au centre de contrôle reçoit la mission de remplacement et les premières archives de la sonde perdue.",
+        "en": "LUNAR-01 has gone silent. The team still on the console receives the replacement mission and the first archives of the lost probe."
+      }
+    },
+    {
+      "id": "ac7e0002-0000-4000-8000-000000000000",
+      "numero": 1,
+      "titre": {
+        "fr": "Une Promesse Qui Doit Vivre",
+        "en": "A Promise That Must Live"
+      },
+      "type": "espace-de-mission",
+      "description": {
+        "fr": "L'objectif principal et ses seconds objectifs sont fixés ; la tension monte autour de l'instrument lié aux travaux d'Elias Moreau.",
+        "en": "The main objective and its secondary ones are set; tension rises around the instrument linked to Elias Moreau's work."
+      }
+    },
+    {
+      "id": "ac7e0003-0000-4000-8000-000000000000",
+      "numero": 2,
+      "titre": {
+        "fr": "Chaque Gramme a Son Prix",
+        "en": "Every Gram Has a Price"
+      },
+      "type": "atelier-spatial",
+      "description": {
+        "fr": "L'orbiteur se conçoit sous budget : masse, énergie et données se disputent chaque gramme et chaque watt.",
+        "en": "The orbiter takes shape under budget: mass, power and data fight for every gram and every watt."
+      }
+    },
+    {
+      "id": "ac7e0004-0000-4000-8000-000000000000",
+      "numero": 3,
+      "titre": {
+        "fr": "Le Point de Non-Retour",
+        "en": "The Point of No Return"
+      },
+      "type": "planification",
+      "description": {
+        "fr": "Lanceur, trajectoire, orbite : la mission est validée, les risques évalués, le lancement engagé.",
+        "en": "Launcher, trajectory, orbit: the mission is validated, risks assessed, launch committed."
+      }
+    },
+    {
+      "id": "ac7e0005-0000-4000-8000-000000000000",
+      "numero": 4,
+      "titre": {
+        "fr": "Seul au-Dessus de la Lune",
+        "en": "Alone Above the Moon"
+      },
+      "type": "controle-de-mission",
+      "description": {
+        "fr": "Insertion, vérifications, premières observations : l'énergie et les données tiennent, puis une anomalie apparaît.",
+        "en": "Insertion, check-outs, first observations: power and data hold, then an anomaly appears."
+      }
+    },
+    {
+      "id": "ac7e0006-0000-4000-8000-000000000000",
+      "numero": 5,
+      "titre": {
+        "fr": "La Dernière Lumière",
+        "en": "The Last Light"
+      },
+      "type": "crise",
+      "description": {
+        "fr": "Crise énergétique : diagnostiquer, désactiver les systèmes, décider quelles données sauver avant la nuit polaire.",
+        "en": "Power crisis: diagnose, shut down subsystems, decide which data to save before the polar night."
+      }
+    },
+    {
+      "id": "ac7e0007-0000-4000-8000-000000000000",
+      "numero": 6,
+      "titre": {
+        "fr": "Ce Que Nous Laissons Derrière",
+        "en": "What We Leave Behind"
+      },
+      "type": "rapport-final",
+      "description": {
+        "fr": "Débriefing, résultats, rapport final : la mission s'inscrit dans les archives et une nouvelle campagne reste possible.",
+        "en": "Debriefing, results, final report: the mission joins the archives and a new campaign remains possible."
+      }
+    }
+  ],
+  "definitionsEvenements": [
+    {
+      "id": "de410001-0000-4000-8000-000000000000",
+      "type": "vieillissement-cellule-solaire",
+      "origine": "degradation cumulée de la paire radiation/thermal",
+      "probabilite": 0.08,
+      "impact": "dureeVie",
+      "ampleur": 1,
+      "indice": "La puissance fournie par les panneaux baisse de plus de 5 % au-dessus de la tendance théorique."
+    },
+    {
+      "id": "de410002-0000-4000-8000-000000000000",
+      "type": "anomalie-maintien-attitude",
+      "origine": "réaction de roue à inertie saturée",
+      "probabilite": 0.1,
+      "impact": "donnees",
+      "ampleur": 1,
+      "indice": "Le pointage nadir dérive pendant deux passages consécutifs au-dessus du même cratère."
+    },
+    {
+      "id": "de410003-0000-4000-8000-000000000000",
+      "type": "impact-micrometeorite",
+      "origine": "flux de poussière lunaire non filtré",
+      "probabilite": 0.06,
+      "impact": "instrument",
+      "cibleId": "1a570002-0000-4000-8000-000000000000",
+      "indice": "Un canal du spectromètre à neutrons sature brièvement puis revient à la normale."
+    },
+    {
+      "id": "de410004-0000-4000-8000-000000000000",
+      "type": "tempete-solaire",
+      "origine": "éruption coronale en direction de la Terre",
+      "probabilite": 0.07,
+      "impact": "objectif",
+      "cibleId": "0b7e0001-0000-4000-8000-000000000000",
+      "indice": "Le compteur de particules grimpe avant que l'alerte radiologique ne soit diffusée au sol."
+    },
+    {
+      "id": "de410005-0000-4000-8000-000000000000",
+      "type": "perte-lien-haut-debit",
+      "origine": "pointage de l'antenne grand gain dégradé",
+      "probabilite": 0.05,
+      "impact": "donnees",
+      "ampleur": 1,
+      "critique": true,
+      "indice": "Le débit de la station solaire tombe sous la moitié de la valeur attendue pendant un passage complet."
+    },
+    {
+      "id": "de410006-0000-4000-8000-000000000000",
+      "type": "surchauffe-instrument",
+      "origine": "cycle d'observation prolongé sans pause",
+      "probabilite": 0.09,
+      "impact": "instrument",
+      "cibleId": "1a570002-0000-4000-8000-000000000000",
+      "indice": "La température du boîtier instrument dépasse sa plage nominale entre deux sessions de mesure."
+    }
+  ],
+  "evenementsNarratifs": [
+    {
+      "id": "e7e20001-0000-4000-8000-000000000000",
+      "declencheur": "acte-0-perte-lunar-01",
+      "texte": {
+        "fr": "La dernière transmission de LUNAR-01 s'achève sur un signal à peine audible. Au centre de contrôle, personne ne parle : la relève commence maintenant.",
+        "en": "LUNAR-01's last transmission ends on a barely audible signal. On the console floor, no one speaks: the handover starts now."
+      },
+      "consequence": "objectif"
+    },
+    {
+      "id": "e7e20002-0000-4000-8000-000000000000",
+      "declencheur": "acte-3-lancement",
+      "texte": {
+        "fr": "Le lanceur s'élève et range la Lune dans le même ciel que les écrans de contrôle. À partir de maintenant, chaque décision se paie en carburant.",
+        "en": "The launcher climbs and files the Moon into the same sky as the control screens. From now on, every decision is paid for in propellant."
+      },
+      "consequence": "dureeVie"
+    },
+    {
+      "id": "e7e20003-0000-4000-8000-000000000000",
+      "declencheur": "acte-4-anomalie",
+      "texte": {
+        "fr": "L'anomalie s'annonce d'abord comme un détail d'ingénierie. Puis les courbes se resserrent et la mission bascule dans l'inconnu.",
+        "en": "The anomaly first looks like an engineering detail. Then the curves tighten and the mission tips into the unknown."
+      },
+      "consequence": "donnees"
+    },
+    {
+      "id": "e7e20004-0000-4000-8000-000000000000",
+      "declencheur": "acte-5-crise-energetique",
+      "texte": {
+        "fr": "Sous la nuit polaire, chaque watt compte. Éteindre un instrument, c'est choisir ce que la mission ne comprendra jamais.",
+        "en": "Under the polar night, every watt counts. Switching off an instrument means choosing what the mission will never understand."
+      },
+      "consequence": "instrument"
+    }
+  ],
+  "fins": [
+    {
+      "code": "A",
+      "titre": {
+        "fr": "The Legacy Lives On",
+        "en": "The Legacy Lives On"
+      },
+      "regles": [
+        {
+          "type": "missionNonPerdue"
+        },
+        {
+          "type": "scienceMinimale",
+          "seuil": 0.8
+        },
+        {
+          "type": "budgetRespecte",
+          "seuil": 1
+        },
+        {
+          "type": "objectifsAtteints",
+          "minimum": 1
+        }
+      ],
+      "conclusion": {
+        "fr": "La mission atteint ses objectifs majeurs et récupère les données essentielles avec une performance technique solide : l'équipe transforme l'échec passé en réussite.",
+        "en": "The mission reaches its major objectives and recovers the essential data with solid technical performance: the team turns past failure into success."
+      }
+    },
+    {
+      "code": "B",
+      "titre": {
+        "fr": "A Fragment of Hope",
+        "en": "A Fragment of Hope"
+      },
+      "regles": [
+        {
+          "type": "missionNonPerdue"
+        },
+        {
+          "type": "scienceMinimale",
+          "seuil": 0.4
+        }
+      ],
+      "conclusion": {
+        "fr": "La mission réussit partiellement et ramène des données utiles, mais certains objectifs sont abandonnés. La perte est réelle ; le travail n'a pas été vain.",
+        "en": "The mission partly succeeds and brings back useful data, but some objectives are abandoned. The loss is real; the work was not in vain."
+      }
+    },
+    {
+      "code": "C",
+      "titre": {
+        "fr": "The Last Signal",
+        "en": "The Last Signal"
+      },
+      "regles": [
+        {
+          "type": "scienceMinimale",
+          "seuil": 0.2
+        }
+      ],
+      "conclusion": {
+        "fr": "Une partie des capacités a été sacrifiée, ou la mission écourtée, pour préserver les données essentielles : le dernier signal porte une décision consciente.",
+        "en": "Part of the spacecraft was sacrificed, or the mission cut short, to save the essential data: the last signal carries a conscious decision."
+      }
+    },
+    {
+      "code": "D",
+      "titre": {
+        "fr": "The Silence of Space",
+        "en": "The Silence of Space"
+      },
+      "regles": [
+        {
+          "type": "scienceMinimale",
+          "seuil": 0
+        }
+      ],
+      "conclusion": {
+        "fr": "La mission est perdue ou les données essentielles ne sont pas récupérées. Le silence devient un avertissement pour les missions futures ; les leçons techniques restent.",
+        "en": "The mission is lost or the essential data never reach Earth. Silence becomes a warning for future missions; the technical lessons remain."
+      }
+    }
+  ],
+  "conditionsDeblocage": [],
+  "personnages": [
+    {
+      "id": "504e0001-0000-4000-8000-000000000000",
+      "fiction": true,
+      "nom": {
+        "fr": "Maya Moreau",
+        "en": "Maya Moreau"
+      },
+      "role": {
+        "fr": "Ingénieure système",
+        "en": "Systems engineer"
+      },
+      "motivation": {
+        "fr": "Finir ce que LUNAR-01 n'a pas pu terminer, sans répéter les marges trop faibles d'Elias Moreau.",
+        "en": "Finish what LUNAR-01 could not, without repeating Elias Moreau's too-thin margins."
+      }
+    },
+    {
+      "id": "504e0002-0000-4000-8000-000000000000",
+      "fiction": true,
+      "nom": {
+        "fr": "Daniel Hayes",
+        "en": "Daniel Hayes"
+      },
+      "role": {
+        "fr": "Directeur de mission",
+        "en": "Mission director"
+      },
+      "motivation": {
+        "fr": "Tenir le budget et le calendrier, et assumer le coût de chaque décision.",
+        "en": "Hold budget and schedule, and own the cost of every decision."
+      }
+    },
+    {
+      "id": "504e0003-0000-4000-8000-000000000000",
+      "fiction": true,
+      "nom": {
+        "fr": "Noah Williams",
+        "en": "Noah Williams"
+      },
+      "role": {
+        "fr": "Responsable scientifique",
+        "en": "Lead scientist"
+      },
+      "motivation": {
+        "fr": "Maximiser la valeur scientifique et défendre les instruments ambitieux.",
+        "en": "Maximise scientific value and defend ambitious instruments."
+      }
+    },
+    {
+      "id": "504e0004-0000-4000-8000-000000000000",
+      "fiction": true,
+      "nom": {
+        "fr": "Amara Okafor",
+        "en": "Amara Okafor"
+      },
+      "role": {
+        "fr": "Opérations de vol et communications",
+        "en": "Flight operations and communications"
+      },
+      "motivation": {
+        "fr": "Préserver le lien : une donnée non transmise n'est pas une donnée sauvée.",
+        "en": "Preserve the link: data not transmitted is data not saved."
+      }
+    }
+  ],
+  "archives": [
+    {
+      "id": "a2c40001-0000-4000-8000-000000000000",
+      "titre": {
+        "fr": "Le spectromètre à neutrons de Lunar Prospector",
+        "en": "Lunar Prospector's neutron spectrometer"
+      },
+      "contenu": {
+        "fr": "En mars 1998, les données de Lunar Prospector suggèrent de la glace d'eau aux deux pôles : le spectromètre à neutrons détecte de l'hydrogène, supposé être de l'eau, dans le régolithe polaire.",
+        "en": "In March 1998, Lunar Prospector data suggest water ice at both poles: the neutron spectrometer detects hydrogen, assumed to be water, in the polar regolith."
+      },
+      "conditionAcces": "acte-1",
+      "realFact": true,
+      "fiction": false,
+      "source": "NASA — Lunar Prospector mission page",
+      "urlSource": "https://science.nasa.gov/mission/lunar-prospector/"
+    },
+    {
+      "id": "a2c40002-0000-4000-8000-000000000000",
+      "titre": {
+        "fr": "L'échec utile de 1999",
+        "en": "The useful failure of 1999"
+      },
+      "contenu": {
+        "fr": "Le 31 juillet 1999, Lunar Prospector est délibérément écrasé dans le cratère Shoemaker : le nuage de poussière observé depuis la Terre ne montre aucune signature d'eau. Un échec documenté, et une leçon pour LUNAR-01.",
+        "en": "On July 31, 1999, Lunar Prospector is deliberately crashed into Shoemaker crater: the dust cloud observed from Earth shows no water signature. A documented failure, and a lesson for LUNAR-01."
+      },
+      "conditionAcces": "acte-0",
+      "realFact": true,
+      "fiction": false,
+      "source": "NASA — Lunar Prospector mission page",
+      "urlSource": "https://science.nasa.gov/mission/lunar-prospector/"
+    },
+    {
+      "id": "a2c40003-0000-4000-8000-000000000000",
+      "titre": {
+        "fr": "LCROSS déniche l'eau au pôle sud",
+        "en": "LCROSS finds water at the south pole"
+      },
+      "contenu": {
+        "fr": "Le 9 octobre 2009, LCROSS impacte un cratère polaire ; le 13 novembre 2009, la NASA annonce que la mission a mis en évidence de l'eau près du pôle sud. C'est la preuve que la glace existe — et la raison d'être de LUNAR-01.",
+        "en": "On October 9, 2009, LCROSS impacts a polar crater; on November 13, 2009, NASA announces the mission uncovered water near the south pole. Proof that ice exists — and the reason LUNAR-01 exists."
+      },
+      "conditionAcces": "acte-1",
+      "realFact": true,
+      "fiction": false,
+      "source": "NASA — LCROSS mission page",
+      "urlSource": "https://science.nasa.gov/mission/lcross/"
+    },
+    {
+      "id": "a2c40004-0000-4000-8000-000000000000",
+      "titre": {
+        "fr": "Journal de bord de LUNAR-01",
+        "en": "LUNAR-01's logbook"
+      },
+      "contenu": {
+        "fr": "Archive fictive : les dernières entrées de LUNAR-01, transcrites par l'équipe après la perte de signal. Elles servent de briefing à la mission de remplacement.",
+        "en": "Fictional archive: LUNAR-01's final entries, transcribed by the team after loss of signal. They brief the replacement mission."
+      },
+      "conditionAcces": "acte-0",
+      "realFact": false,
+      "fiction": true
+    }
+  ]
+}

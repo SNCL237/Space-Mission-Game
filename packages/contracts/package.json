@@ -1,0 +1,47 @@
+{
+  "name": "@smdg/contracts",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Contrats C1 à C9 (types TypeScript + schémas Zod) et jetons de ports (RI3).",
+  "sideEffects": false,
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/esm/index.js",
+  "types": "./dist/esm/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/esm/index.d.ts",
+        "default": "./dist/esm/index.js"
+      },
+      "require": {
+        "types": "./dist/cjs/index.d.ts",
+        "default": "./dist/cjs/index.js"
+      }
+    },
+    "./ports": {
+      "import": {
+        "types": "./dist/esm/ports.d.ts",
+        "default": "./dist/esm/ports.js"
+      },
+      "require": {
+        "types": "./dist/cjs/ports.d.ts",
+        "default": "./dist/cjs/ports.js"
+      }
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.esm.json && tsc -p tsconfig.cjs.json && node ../../scripts/finaliser-cjs.mjs dist/cjs",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "zod": "^4.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.20.5"
+  }
+}

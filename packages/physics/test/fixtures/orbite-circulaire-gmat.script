@@ -1,0 +1,45 @@
+Create Spacecraft Sat;
+Sat.DateFormat = UTCGregorian;
+Sat.Epoch = '01 Jan 2000 12:00:00.000';
+Sat.CoordinateSystem = Selenocentric;
+Sat.DisplayStateType = Keplerian;
+Sat.SMA = 1837.1;
+Sat.ECC = 0;
+Sat.INC = 90;
+Sat.RAAN = 0;
+Sat.AOP = 0;
+Sat.TA = 0;
+
+Create CoordinateSystem Selenocentric;
+Selenocentric.Origin = Luna;
+Selenocentric.Axes = BodyInertial;
+
+Create ForceModel MoonFM;
+MoonFM.CentralBody = Luna;
+MoonFM.PrimaryBodies = {Luna};
+MoonFM.PointMasses = {};
+MoonFM.Drag = None;
+MoonFM.SRP = Off;
+MoonFM.RelativisticCorrection = Off;
+MoonFM.GravityField.Luna.Degree = 0;
+MoonFM.GravityField.Luna.Order = 0;
+MoonFM.GravityField.Luna.PotentialFile = 'LP165P.cof';
+
+Create Propagator OrbitProp;
+OrbitProp.FM = MoonFM;
+OrbitProp.Type = PrinceDormand78;
+OrbitProp.InitialStepSize = 10;
+OrbitProp.Accuracy = 1e-12;
+OrbitProp.MinStep = 0;
+OrbitProp.MaxStep = 60;
+OrbitProp.MaxStepAttempts = 50;
+OrbitProp.StopIfAccuracyIsViolated = true;
+
+Create ReportFile OrbitReport;
+OrbitReport.Filename = 'orbite-circulaire-gmat.txt';
+OrbitReport.Precision = 16;
+OrbitReport.Add = {Sat.ElapsedSecs, Sat.Selenocentric.X, Sat.Selenocentric.Y, Sat.Selenocentric.Z};
+OrbitReport.WriteHeaders = true;
+
+BeginMissionSequence;
+Propagate OrbitProp(Sat) {Sat.ElapsedSecs = 7065.62810414175};

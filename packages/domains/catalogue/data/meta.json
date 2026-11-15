@@ -1,0 +1,76 @@
+{
+  "id": "ca7a0001-0000-4000-8000-000000000000",
+  "version": "1.2.0",
+  "niveauxDifficulte": [
+    "decouverte",
+    "ingenieur",
+    "expert"
+  ],
+  "seuils": {
+    "alerteOrange": 0.9,
+    "alerteRouge": 1,
+    "margeFaible": 0.9
+  },
+  "categories": [
+    {
+      "id": "ca7e0001-0000-4000-8000-000000000000",
+      "segment": "spatial",
+      "code": "structure"
+    },
+    {
+      "id": "ca7e0002-0000-4000-8000-000000000000",
+      "segment": "spatial",
+      "code": "energie-panneau"
+    },
+    {
+      "id": "ca7e0003-0000-4000-8000-000000000000",
+      "segment": "spatial",
+      "code": "energie-batterie"
+    },
+    {
+      "id": "ca7e0004-0000-4000-8000-000000000000",
+      "segment": "spatial",
+      "code": "communications"
+    },
+    {
+      "id": "ca7e0005-0000-4000-8000-000000000000",
+      "segment": "spatial",
+      "code": "ordinateur"
+    },
+    {
+      "id": "ca7e0006-0000-4000-8000-000000000000",
+      "segment": "spatial",
+      "code": "attitude"
+    },
+    {
+      "id": "ca7e0007-0000-4000-8000-000000000000",
+      "segment": "spatial",
+      "code": "propulsion"
+    },
+    {
+      "id": "ca7e0008-0000-4000-8000-000000000000",
+      "segment": "spatial",
+      "code": "instrument"
+    },
+    {
+      "id": "ca7e0009-0000-4000-8000-000000000000",
+      "segment": "spatial",
+      "code": "orbite"
+    },
+    {
+      "id": "ca7e000a-0000-4000-8000-000000000000",
+      "segment": "lancement",
+      "code": "lanceur"
+    },
+    {
+      "id": "ca7e000b-0000-4000-8000-000000000000",
+      "segment": "sol",
+      "code": "station"
+    },
+    {
+      "id": "ca7e000c-0000-4000-8000-000000000000",
+      "segment": "utilisateurs",
+      "code": "seuil"
+    }
+  ]
+}

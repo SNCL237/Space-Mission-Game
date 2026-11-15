@@ -1,0 +1,28 @@
+{
+  "name": "smdg",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "packageManager": "pnpm@10.28.0",
+  "scripts": {
+    "build": "pnpm -r build",
+    "test": "vitest run",
+    "typecheck": "pnpm -r typecheck",
+    "lint": "eslint .",
+    "boundaries": "depcruise --config dependency-cruiser.config.cjs packages apps",
+    "dev:server": "pnpm --filter @smdg/server build && pnpm --filter @smdg/server start",
+    "seed": "node apps/server/scripts/amorcer.mjs"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@types/node": "^22.20.5",
+    "dependency-cruiser": "^16.10.4",
+    "eslint": "^10.15.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.7",
+    "prettier": "^3.10.1",
+    "typescript": "^5.5.4",
+    "typescript-eslint": "^8.72.2",
+    "vitest": "^3.2.7"
+  }
+}

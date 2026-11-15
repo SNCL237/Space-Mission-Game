@@ -1,0 +1,10 @@
+packages:
+  - "packages/*"
+  - "packages/domains/*"
+  - "apps/*"
+
+allowBuilds:
+  esbuild: true
+  # Telemetry marketing injecté par swagger-ui-dist : jamais exécuté (et évite
+  # l'erreur ERR_PNPM_IGNORED_BUILDS à l'installation CI).
+  "@scarf/scarf": false

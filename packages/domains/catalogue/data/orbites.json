@@ -1,0 +1,43 @@
+{
+  "orbites": [
+    {
+      "id": "02610001-0000-4000-8000-000000000000",
+      "source": "a-calibrer",
+      "type": "polaire",
+      "gameplay": {
+        "altitudeKm": 100,
+        "inclinaisonDeg": 90,
+        "periodeS": 7065.7,
+        "fractionOmbre": 0.3944,
+        "tempsContactSolMin": 4.47,
+        "couverture": 0.9
+      }
+    },
+    {
+      "id": "02610002-0000-4000-8000-000000000000",
+      "source": "a-calibrer",
+      "type": "circulaireBasse",
+      "gameplay": {
+        "altitudeKm": 50,
+        "inclinaisonDeg": 85,
+        "periodeS": 6779.2,
+        "fractionOmbre": 0.4245,
+        "tempsContactSolMin": 2.57,
+        "couverture": 0.85
+      }
+    },
+    {
+      "id": "02610003-0000-4000-8000-000000000000",
+      "source": "a-calibrer",
+      "type": "elliptique",
+      "gameplay": {
+        "altitudeKm": 150,
+        "inclinaisonDeg": 30,
+        "periodeS": 7356.1,
+        "fractionOmbre": 0.3722,
+        "tempsContactSolMin": 6.12,
+        "couverture": 0.8
+      }
+    }
+  ]
+}

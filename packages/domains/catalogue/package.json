@@ -1,0 +1,44 @@
+{
+  "name": "@smdg/catalogue",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Domaine catalogue (CAT) : schéma JSON F2.1, import validé versionné (F2.2), lecture C1 (F2.3), catalogue lunaire F2.4/F2.5, persistance TypeORM schéma `cat` (PT1).",
+  "sideEffects": false,
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/esm/index.js",
+  "types": "./dist/esm/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/esm/index.d.ts",
+        "default": "./dist/esm/index.js"
+      },
+      "require": {
+        "types": "./dist/cjs/index.d.ts",
+        "default": "./dist/cjs/index.js"
+      }
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.esm.json && tsc -p tsconfig.cjs.json && node ../../../scripts/finaliser-cjs.mjs dist/cjs",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@nestjs/common": "^12.5.0",
+    "@nestjs/swagger": "^12.1.2",
+    "@smdg/contracts": "workspace:*",
+    "@smdg/physics": "workspace:*",
+    "pg": "^8.13.0",
+    "reflect-metadata": "^0.2.2",
+    "typeorm": "^0.3.20",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/node": "^22.20.5"
+  }
+}

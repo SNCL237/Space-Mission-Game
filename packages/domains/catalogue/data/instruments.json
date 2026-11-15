@@ -1,0 +1,104 @@
+{
+  "instruments": [
+    {
+      "id": "1a570001-0000-4000-8000-000000000000",
+      "source": "NASA LRO (masse et puissance) ; débit et valeur scientifique a-calibrer",
+      "categorie": "instrument",
+      "nom": "camera-nadir-haute-resolution",
+      "missionsReelles": [
+        "LRO (LROC)"
+      ],
+      "gameplay": {
+        "masseKg": 19.2,
+        "powerW": 24.0,
+        "dutyCycle": 1,
+        "costMUSD": 15,
+        "dataMbps": 0.9,
+        "valeurScientifique": 0.9,
+        "fiabilite": 0.95
+      },
+      "reference": {
+        "source": "NASA LRO",
+        "urlSource": "https://science.nasa.gov/mission/lro/spacecraft-and-instruments/",
+        "masseKg": 19.2,
+        "powerW": 24.0
+      },
+      "urlSource": "https://science.nasa.gov/mission/lro/spacecraft-and-instruments/"
+    },
+    {
+      "id": "1a570002-0000-4000-8000-000000000000",
+      "source": "NASA LRO (masse et puissance) ; débit et valeur scientifique a-calibrer",
+      "categorie": "instrument",
+      "nom": "spectrometre-neutronique",
+      "missionsReelles": [
+        "LRO (LEND)"
+      ],
+      "gameplay": {
+        "masseKg": 25.8,
+        "powerW": 11.6,
+        "dutyCycle": 1,
+        "costMUSD": 8,
+        "dataMbps": 4,
+        "valeurScientifique": 0.6,
+        "fiabilite": 0.95
+      },
+      "reference": {
+        "source": "NASA LRO",
+        "urlSource": "https://science.nasa.gov/mission/lro/spacecraft-and-instruments/",
+        "masseKg": 25.8,
+        "powerW": 11.6
+      },
+      "urlSource": "https://science.nasa.gov/mission/lro/spacecraft-and-instruments/"
+    },
+    {
+      "id": "1a570003-0000-4000-8000-000000000000",
+      "source": "NASA LRO (masse et puissance) ; débit et valeur scientifique a-calibrer",
+      "categorie": "instrument",
+      "nom": "radiometre-thermique",
+      "missionsReelles": [
+        "LRO (Diviner)"
+      ],
+      "gameplay": {
+        "masseKg": 11.0,
+        "powerW": 24.7,
+        "dutyCycle": 1,
+        "costMUSD": 9,
+        "dataMbps": 0.5,
+        "valeurScientifique": 0.7,
+        "fiabilite": 0.96
+      },
+      "reference": {
+        "source": "NASA LRO",
+        "urlSource": "https://science.nasa.gov/mission/lro/spacecraft-and-instruments/",
+        "masseKg": 11.0,
+        "powerW": 24.7
+      },
+      "urlSource": "https://science.nasa.gov/mission/lro/spacecraft-and-instruments/"
+    },
+    {
+      "id": "1a570004-0000-4000-8000-000000000000",
+      "source": "NASA LRO (masse et puissance) ; débit et valeur scientifique a-calibrer",
+      "categorie": "instrument",
+      "nom": "radar-synthese-ouverture",
+      "missionsReelles": [
+        "LRO (Mini-RF)"
+      ],
+      "gameplay": {
+        "masseKg": 13.8,
+        "powerW": 7.0,
+        "dutyCycle": 1,
+        "costMUSD": 12,
+        "dataMbps": 2,
+        "valeurScientifique": 0.8,
+        "fiabilite": 0.93
+      },
+      "reference": {
+        "source": "NASA LRO",
+        "urlSource": "https://science.nasa.gov/mission/lro/spacecraft-and-instruments/",
+        "masseKg": 13.8,
+        "powerW": 7.0
+      },
+      "urlSource": "https://science.nasa.gov/mission/lro/spacecraft-and-instruments/"
+    }
+  ]
+}
