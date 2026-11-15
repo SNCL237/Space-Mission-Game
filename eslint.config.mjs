@@ -15,7 +15,7 @@ export default tseslint.config(
   },
   js.configs.recommended,
   ...tseslint.configs.recommended,
-  {
+    {
     files: ["**/*.cjs", "**/*.mjs"],
     languageOptions: {
       globals: {
@@ -24,6 +24,11 @@ export default tseslint.config(
         __dirname: "readonly",
         process: "readonly",
         console: "readonly",
+        crypto: "readonly",
+        TextEncoder: "readonly",
+        TextDecoder: "readonly",
+        URL: "readonly",
+        fetch: "readonly",
       },
     },
   },
