@@ -1,0 +1,78 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+# Annule l'exécution précédente d'une même branche quand un nouveau commit arrive
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  qualite:
+    name: Lint, frontières, build, typage, tests
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    # PostgreSQL 16 : même image que docker-compose.yml.
+    # Les schémas (ide, sce, cat…) sont créés par les migrations TypeORM
+    # (migrationsRun) : pas besoin de db/init en CI.
+    services:
+      postgres:
+        image: postgres:16-alpine
+        env:
+          POSTGRES_USER: smdg
+          POSTGRES_PASSWORD: smdg
+          POSTGRES_DB: smdg
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U smdg"
+          --health-interval 5s
+          --health-timeout 3s
+          --health-retries 10
+
+    env:
+      # Port 5432 du service (5433 est réservé au docker-compose local, voir Q-18)
+      DATABASE_URL: postgres://smdg:smdg@localhost:5432/smdg
+      JWT_SECRET: ci-secret-for-jwt-at-least-32-characters-long
+      CORS_ORIGINS: http://localhost:5173
+
+    steps:
+      - name: Récupérer le dépôt
+        uses: actions/checkout@v4
+
+      # La version de pnpm est lue dans "packageManager" (pnpm@10.28.0)
+      - name: Installer pnpm
+        uses: pnpm/action-setup@v4
+
+      - name: Installer Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+
+      - name: Installer les dépendances
+        run: pnpm install --frozen-lockfile
+
+      - name: Lint (ESLint + Prettier)
+        run: pnpm lint
+
+      - name: Frontières entre paquets (dependency-cruiser)
+        run: pnpm boundaries
+
+      # Le build doit précéder le typage et les tests :
+      # les paquets se consomment via leur dossier dist (ESM + CJS).
+      - name: Build
+        run: pnpm build
+
+      - name: Typage
+        run: pnpm typecheck
+
+      - name: Tests (avec PostgreSQL)
+        run: pnpm test
