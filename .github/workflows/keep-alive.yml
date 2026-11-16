@@ -1,0 +1,21 @@
+name: Keep alive
+
+on:
+  schedule:
+    - cron: "*/10 * * * *" # toutes les 10 minutes (heure UTC, retards possibles)
+  workflow_dispatch: # lancement manuel depuis l'onglet Actions
+
+permissions: {}
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      # /health réveille le serveur, /campagne/scenarios interroge aussi la base (Supabase)
+      - name: Pinguer l'API
+        run: |
+          API_URL="https://space-mission-game-lw7x.onrender.com/api"
+          for chemin in /health /campagne/scenarios; do
+            curl -fsS --retry 3 --retry-delay 20 --max-time 90 -o /dev/null -w "$chemin -> %{http_code} (%{time_total}s)\n" "$API_URL$chemin"
+          done
