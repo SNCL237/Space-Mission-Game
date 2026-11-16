@@ -11,6 +11,15 @@ importers:
       '@eslint/js':
         specifier: ^10.0.1
         version: 10.0.1(eslint@10.15.0)
+      '@smdg/contracts':
+        specifier: workspace:*
+        version: link:packages/contracts
+      '@smdg/kernel':
+        specifier: workspace:*
+        version: link:packages/kernel
+      '@smdg/physics':
+        specifier: workspace:*
+        version: link:packages/physics
       '@types/node':
         specifier: ^22.20.5
         version: 22.20.5

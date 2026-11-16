@@ -15,6 +15,9 @@
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
+    "@smdg/contracts": "workspace:*",
+    "@smdg/kernel": "workspace:*",
+    "@smdg/physics": "workspace:*",
     "@types/node": "^22.20.5",
     "dependency-cruiser": "^16.10.4",
     "eslint": "^10.15.0",
